@@ -237,47 +237,10 @@
 
   		  </table>
 
-      	  <!-- <br>
-		  <hr>
-			<div class="disclaimerbox">
-	  		  <center><h2>How to interpret the results</h2></center>
-
-	  		 <span style="color:#646464">
-	  		  	<center><span style="font-size:28px"><b>How to interpret the results</b></span></center>
-
-	  		  	<br>
-				
-				<i> Welcome! Computer vision algorithms often work well on some images, but fail on others. Ours is like this too. We believe our work is a significant step forward in solving the colorization problem. However, there are still many hard cases, and this is by no means a solved problem. Some failure cases can be seen <a href="#vgg_res">below</a> and the figure <a href="./resources/images/imnet_failures.jpg">here</a>.
-
-				</i>
-
-				<br><br>
-
-				<i>This is partly because our algorithm is trained on one million images from the Imagenet dataset, and will thus work well for these types of images, but not necessarily for others. We call this the <i>"dataset bias"</i> problem. We include <a href="#bw_legacy">colorizations of black and white photos of renowned photographers</a> as an interesting <i>"out-of-dataset"</i> experiment and make no claims as to artistic improvements, although we do enjoy many of the results!</i>
-
-				<br><br>
-
-				<i>There has been some concurrent work on this subject as well. Specifically, see Larsson et al. and Iizuka et al. <a href="#related_work">below</a>.</i>
-
-				<br><br>
-
-				<i>Please enjoy our results, and if you're so inclined, <a href="http://demos.algorithmia.com/colorize-photos/">try the model</a> yourself</i>!
-
-			</span>
-
-			</div>
-  		  <br><br>
-		  <hr> -->
-
 
   		  <table align=center width=850px>
 	  		  <center><h1>Abstract</h1></center>
-	  		  <tr>
-	  		  	<td>
-<!-- 					Given a grayscale photograph as input, this paper attacks the problem of hallucinating a <i>plausible</i> color version of the photograph. This problem is clearly underconstrained, so previous approaches have either relied on significant user interaction or resulted in desaturated colorizations. We propose a fully automatic approach that produces vibrant and realistic colorizations. We embrace the underlying uncertainty of the problem by posing it as a classification task and explore using class-rebalancing at training time to increase the diversity of colors in the result. The system is implemented as a feed-forward operation in a CNN at test time and is trained on over a million color images. We evaluate our algorithm using a "colorization Turing test", asking human subjects to choose between a generated and ground truth color image. Our method successfully fools humans 20% of the time, significantly higher than previous methods. -->
-	  		    </td>
-	  		  </tr>
-			</table>
+		  </table>
 
 			Correlating vision with touch is essential for performing physical interactions, and understanding material properties. Learning these correlations, however, has proven challenging, since existing large-scale datasets have not captured the full diversity real-world vision and touch. To address this shortcoming, we propose a dataset for multimodal visuo-tactile learning called {\em Touch and Go}, in which human data collectors probe objects in natural environments with tactile sensors, while recording egocentric video. The objects and scenes in the resulting dataset are significantly more diverse than prior efforts, making it well-suited to a variety of tasks that involve understanding materials and physical interactions. To demonstrate its effectiveness, we successfully apply it to a variety of tasks: 1) self-supervised visuo-tactile feature learning, 2) the novel task of tactile-driven image stylization, i.e., making an object look as though it were ''felt like'' a given tactile input, and 3) predicting future frames of a tactile signal from visuo-tactile inputs.
 
@@ -286,139 +249,64 @@
   		  <br><br>
 		  <hr>
 
-	  <!-- TRY THE DEMO -->
- 		<!-- <center><h1>Try the Interactive Demo</h1></center>
 
- 		  <br>
+		<table align=center width=850px>
+			<center><h1>Dataset</h1></center>
+	    </table>
+		<br>
+		<center style="font-size:20px"><a href='https://drive.google.com/drive/folders/1NDasyshDCL9aaQzxjn_-Q5MBURRT360B'> [Download Link]</a></center><br>
+		
+	<table align=center width=95%>
+		<tr>
+			<th style="font-size:20px">Label</th>
+			<th style="font-size:20px">Visual Video &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GelSight Video</th>
+		</tr>
+		<tr>
+			<th style="font-size:20px">Wall</th>
 
-  		  <table align=center width=1000px>
-  			  <tr>
-  	              <td align=center width=175px>
-  					<center>
-						  <td><a href='http://demos.algorithmia.com/colorize-photos/'><img class="round" style="height:400px" src="./resources/images/algorithmia.png"/></a></td>
-	  		  		</center>
-	  		  	</br>
-			  </tr>
-		  </table> -->
+			<th>
+				<video controls class="html-video" width="256" height="144"><source src="./resources/video/vis1.mp4" type="video/mp4"></video>
+				<video controls class="html-video" width="256" height="144"><source src="./resources/video/gel1.mp4" type="video/mp4"></video><br>
+			</th>
+		</tr>
+		<tr>
+			<th style="font-size:20px">Grass</th>
+			<th>
+				<video controls class="html-video" width="256" height="144"><source src="./resources/video/vis2.mp4" type="video/mp4"></video>
+				<video controls class="html-video" width="256" height="144"><source src="./resources/video/gel2.mp4" type="video/mp4"></video><br>
 
-  		  <!-- <table align=center width=100px>
-			  <tr><center> <br>
-				<span style="font-size:28px"><a href='http://demos.algorithmia.com/colorize-photos/'>[Algorithmia]</a> Demo</span></span><i></i> -->
-				<!-- <br><br> -->
-				<!-- <span style="font-size:18px"></a>Please contact the corresponding author at <b>rich.zhang at eecs.berkeley.edu</b> with any examples you would like to share.</span> -->
-			  <!-- <br> -->
-			  <!-- </center></tr>
-		  </table> -->
+			</th>
+		</tr>
+		<tr>
+			<th style="font-size:20px">Brick</th>
+			<th>
+				<video controls class="html-video" width="256" height="144"><source src="./resources/video/vis3.mp4" type="video/mp4"></video>
+				<video controls class="html-video" width="256" height="144"><source src="./resources/video/gel3.mp4" type="video/mp4"></video><br>
 
-      	  <!-- <br>
-		  <hr> -->
+			</th>
+		</tr>
+		<tr>
+			<th style="font-size:20px">Synthetic Fabric</th>
+			<th>
+				<video controls class="html-video" width="256" height="144"><source src="./resources/video/vis4.mp4" type="video/mp4"></video>
+				<video controls class="html-video" width="256" height="144"><source src="./resources/video/gel4.mp4" type="video/mp4"></video><br>
 
-<!-- 
-  		  <table align=center width=1100px>
-	  		 	<center><h1>Videos</h1></center>
-  			  <tr> -->
-<!--   	              <td width=400px>
-  					<center>
-  	                	<img class="rounded" src = "./index_files/teaser_v3.jpg" height="275px"></img>
-  	                	<br>
-					</center>
-  	              </td> -->
-		  		  <!-- <table align=center width=800px>
-		  		    <tr>
-		              <td align=center width=800px>
-						<iframe width="800" height="450" src="https://www.youtube.com/embed/4xoTD58Wt-0" frameborder="0" allowfullscreen></iframe>
-					  </td>
-					</tr>
-					<tr>
-		              <td align=center width=600px>
-		              <span style="font-size:22px">ECCV Talk 10/2016, also hosted on [<a href="http://videolectures.net/eccv2016_zhang_image_colorization/">VideoLectures</a>]</span>
-					  </td>
-					</tr>
-				  </table>
-				<br>
-                </tr>
-  		  </table> -->
+			</th>
+		</tr>
+		</table><br>
+		
 
-        <!-- <center></center> -->
-  		  <!-- <br> -->
-		  <!-- <hr> -->
-
-	  <!-- NETWORK ARCHITECTURE, TRY THE MODEL -->
- 		<!-- <center><h1>Try our code</h1></center>
-  		  <table align=center width=1000px>
-  			  <tr>
-  	              <td align=center width=750px>
-  					<center>
-						  <td><a href='https://github.com/richzhang/colorization'><img class="round" style="height:275px" src="./resources/images/net_diagram.jpg"/></a></td>
-	  		  		</center> -->
-	  		  	<!-- </br> -->
-			  <!-- </tr>
-		  </table> -->
-
-  		  <!-- <table align=center width=800px>
-			  <tr><center> <br> -->
-				<!-- <span style="font-size:28px">Code coming soon!</span></i>			  	 -->
-				<!-- <span style="font-size:28px">&nbsp;<a href='https://github.com/richzhang/colorization'>[GitHub]</a> Demo -->
-
-				<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Caffe&nbsp;<a href="http://www.eecs.berkeley.edu/~rich.zhang/projects/2016_colorization/files/demo_v0/colorization_deploy_v0.prototxt">[Prototxt]</a>&nbsp;<a href="https://www.dropbox.com/s/8iq5wm4ton5gwe1/colorization_release_v0.caffemodel">[Model 129MB]--></span></span><i></i>
-				<!-- <span style="font-size:28px"></a></span>
-			  <br>
-			  </center></tr>
-		  </table> -->
-
-<!-- <a href="http://www.eecs.berkeley.edu/~rich.zhang/projects/2016_colorization/files/demo_v0/colorization_release_v0.caffemodel">[Model 129MB]</span> -->
-
-      	  <br>
-		  <hr>
-
-  		  <!-- <table align=center width=550px> -->
-  		  <!-- <table align=center width=425px>
-	 		<center><h1>Paper and Supplementary Material</h1></center>
-  			  <tr> -->
-  	              <!--<td width=300px align=left>-->
-  	              <!-- <a href="http://arxiv.org/pdf/1603.08511.pdf"> -->
-				  <!-- <td><a href="https://arxiv.org/abs/1603.08511"><img class="layered-paper-big" style="height:175px" src="./resources/images/paper_pdf_thumb.png"/></a></td>
-				  <td><span style="font-size:14pt">Zhang, Isola, Efros.<br>
-				  Colorful Image Colorization.<br>
-				  In ECCV, 2016 (oral).<br>
-				  (hosted on <a href="https://arxiv.org/abs/1603.08511">arXiv</a>)</a> -->
-				  <!-- <td><span style="font-size:14pt">Zhang, Isola, Efros. Colorful Image Colorization. In ECCV, 2016. (hosted on arXiv) -->
-				  <!-- <span style="font-size:4pt"><a href="http://arxiv.org/pdf/1603.08511.pdf"><br></a> -->
-<!-- 				  <span style="font-size:14pt"><br><b>Primary revisions in v2</b>
-				  <span style="font-size:10pt"><br> &bull; ECCV 2016 Camera Ready
-				  <span style="font-size:10pt"><br> &bull; Self-supervision/representation learning experiments (see <b>Section 3.2</b>) -->
-				  <!-- <br> &bull; Loss function comparisons, with all models re-trained from scratch (see <b>Table 1</b>) -->
-				  <!-- </span>
-				  </td>
-  	              </td>
-              </tr>
-  		  </table>
-		  <br> -->
-
-		  <!-- <br> -->
-<!--   		  <table align=center width=200px>
-			  <tr>
-				  <td><span style="font-size:11pt"><a href="http://arxiv.org/pdf/1603.08511v1.pdf">Previous version [v1] [10MB]</a></td>
-				  <td><span style="font-size:12pt"><a href="./resources/supp.pdf">Additional details [v1] [1MB]</a></td>
-			  </tr>
-			  <tr>
-				  <td><span style="font-size:11pt"><a href="./resources/supp.pdf">Additional details [v1] [1MB]</a></td>
-			  </tr>
-		  </table> -->
-
-		  <!-- <table align=center width=600px>
-			  <tr>
-				  <td><span style="font-size:14pt"><center>
-				  	<a href="./resources/bibtex_eccv2016_colorization.txt">[Bibtex]</a>
-  	              </center></td>
-              </tr>
-  		  </table>
-
-		  <hr>
 
   		  <a name="bw_legacy"></a>
-  		  <center><h1>Results on legacy black and white photos</h1></center>
-  		  We show results on legacy black and white photographs from renowned photographers Ansel Adams and Henri Cartier-Bresson, along with a set of miscellaneous photos.<br> -->
+  		  <center><h1>Applications</h1></center>
+			To evaluate the effectiveness of our dataset, we perform tasks that are designed to span a variety of application domains, including representation learning, image synthesis, and future prediction.
+			<center><h3>Multimodal self-supervised representation learning</h3></center>
+			Our goal is to learn a representation that captures the information and correspondences between visual and tactile images, which can be useful for downstream tasks.
+			<br>
+			
+			<center><h3>Tactile-driven image stylization</h3></center>
+			we propose the task of tactile-driven image stylization: making an image look as though it “feels like” a given touch signal.
+
 
   		  <!-- along with miscellaneous photos. -->
   		  <!-- <br>
