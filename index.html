@@ -118,7 +118,6 @@
 <html>
   <head>
 		<title>Touch and Go</title>
-		<meta property="og:image" content="http://richzhang.github.io/colorization/resources/images/teaser3.jpg"/>
 		<meta property="og:title" content="Touch and Go" />
   </head>
 
@@ -302,11 +301,29 @@
 			To evaluate the effectiveness of our dataset, we perform tasks that are designed to span a variety of application domains, including representation learning, image synthesis, and future prediction.
 			<center><h3>Multimodal self-supervised representation learning</h3></center>
 			Our goal is to learn a representation that captures the information and correspondences between visual and tactile images, which can be useful for downstream tasks.
-			<br>
+			<br><br><br>
 			
 			<center><h3>Tactile-driven image stylization</h3></center>
-			we propose the task of tactile-driven image stylization: making an image look as though it “feels like” a given touch signal.
+			We propose the task of tactile-driven image stylization: making an image look as though it “feels like” a given touch signal.
+			<br><br>
+			<center>
+				<a href="./resources/images/style_trans1.png"><img class="rounded" src = "./resources/images/style_trans1.png" height="500px"></img></href></a><br>
+			</center>
+			
+			<td width=400px>
+				<center>
+					<span style="font-size:14px"><i>Qualitative results our model on tactile-driven image stylization. For each row, we show an input
+						image (left) and the manipulated image (to its right) obtained by stylizing with a given tactile input (right side).</i>
+			  </center>
+			  </td>
 
+			<br><br><br>  
+			<center><h3>Multimodal video prediction</h3></center>
+			We evaluate our model for predicting future tactile signals. We compare a tactile-only model to a multimodal visuo-tactile model, and show that the latter obtains better performance.
+			<br><br>
+			<center>
+				<a href="./resources/images/video_pred1.png"><img class="rounded" src = "./resources/images/video_pred1.png" height="400px" width="1000px"></img></href></a><br>
+			</center>
 
   		  <!-- along with miscellaneous photos. -->
   		  <!-- <br>
