@@ -241,7 +241,7 @@
 	  		  <center><h1>Abstract</h1></center>
 		  </table>
 
-			Correlating vision with touch is essential for performing physical interactions, and understanding material properties. Learning these correlations, however, has proven challenging, since existing large-scale datasets have not captured the full diversity real-world vision and touch. To address this shortcoming, we propose a dataset for multimodal visuo-tactile learning called {\em Touch and Go}, in which human data collectors probe objects in natural environments with tactile sensors, while recording egocentric video. The objects and scenes in the resulting dataset are significantly more diverse than prior efforts, making it well-suited to a variety of tasks that involve understanding materials and physical interactions. To demonstrate its effectiveness, we successfully apply it to a variety of tasks: 1) self-supervised visuo-tactile feature learning, 2) the novel task of tactile-driven image stylization, i.e., making an object look as though it were ''felt like'' a given tactile input, and 3) predicting future frames of a tactile signal from visuo-tactile inputs.
+			Correlating vision with touch is essential for performing physical interactions, and understanding material properties. Learning these correlations, however, has proven challenging, since existing large-scale datasets have not captured the full diversity real-world vision and touch. To address this shortcoming, we propose a dataset for multimodal visuo-tactile learning called Touch and Go, in which human data collectors probe objects in natural environments with tactile sensors, while recording egocentric video. The objects and scenes in the resulting dataset are significantly more diverse than prior efforts, making it well-suited to a variety of tasks that involve understanding materials and physical interactions. To demonstrate its effectiveness, we successfully apply it to a variety of tasks: 1) self-supervised visuo-tactile feature learning, 2) the novel task of tactile-driven image stylization, i.e., making an object look as though it were ''felt like'' a given tactile input, and 3) predicting future frames of a tactile signal from visuo-tactile inputs.
 
 <!-- 					Given a grayscale photograph as input, this paper attacks the problem of hallucinating a <i>plausible</i> color version of the photograph. This problem is clearly underconstrained, so previous approaches have either relied on significant user interaction or resulted in desaturated colorizations. We propose a fully automatic approach that produces vibrant and realistic colorizations. We embrace the underlying uncertainty of the problem by posing it as a classification task and explore using class-rebalancing at training time to increase the diversity of colors in the result. The system is implemented as a feed-forward operation in a CNN at test time and is trained on over a million color images. We evaluate our algorithm using a "colorization Turing test", asking human subjects to choose between a generated and ground truth color image. Our method successfully fools humans 20% of the time, significantly higher than previous methods. -->
 
@@ -254,11 +254,34 @@
 	    </table>
 		<br>
 		<center style="font-size:20px"><a href='https://drive.google.com/drive/folders/1NDasyshDCL9aaQzxjn_-Q5MBURRT360B'> [Download Link]</a></center><br>
-		
+        <div align=center width=100%>
+            <p  style="text-align: left; width: 100%" >
+                <b>Touch and Go Dataset</b> &nbsp &nbsp &nbsp We collect a dataset of natural vision-and-touch signals. Our dataset contains multimodal data
+				recorded by humans, who probe objects in their natural locations with a tactile sensor. To more easily
+				train and analyze models on this dataset, we also collect material labels and identify touch onsets.
+            </p>
+        </div>
+		<br>
+	<center><h3>Videos Classified by Labels</h3></center>
+	<br><br>
 	<table align=center width=95%>
 		<tr>
-			<th style="font-size:20px">Label</th>
+			<th style="font-size:20px"> <p>Label</p></th>
 			<th style="font-size:20px">Visual Video &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GelSight Video</th>
+		</tr>
+
+		<tr>
+			<th style="font-size:20px">Synthetic Fabric</th>
+			<th>
+				<video controls class="html-video" width="480" height="189"><source src="./resources/video/comb4.mp4" type="video/mp4"></video>
+			</th>
+		</tr>
+
+		<tr>
+			<th style="font-size:20px">Wood</th>
+			<th>
+				<video controls class="html-video" width="480" height="189"><source src="./resources/video/comb5.mp4" type="video/mp4"></video>
+			</th>
 		</tr>
 		<tr>
 			<th style="font-size:20px">Wall</th>
@@ -284,23 +307,25 @@
 
 			</th>
 		</tr>
-
-		<tr>
-			<th style="font-size:20px">Synthetic Fabric</th>
-			<th>
-				<video controls class="html-video" width="480" height="189"><source src="./resources/video/comb4.mp4" type="video/mp4"></video>
-			</th>
-		</tr>
-
-		<tr>
-			<th style="font-size:20px">Wood</th>
-			<th>
-				<video controls class="html-video" width="480" height="189"><source src="./resources/video/comb5.mp4" type="video/mp4"></video>
-			</th>
-		</tr>
 		</table><br>
 		
+		<center><h3>Untrimmed Videos</h3></center>
+		<br>
+		<table align=center width=95% style="border-collapse:separate; border-spacing:0px 30px;">
+			<tr>
+				<th>
+					<video controls class="html-video" width="640" height="252"><source src="./resources/video/comb_long1.mp4" type="video/mp4"></video>
+				</th>
+				
+			</tr>
 
+			<tr>
+				<th>
+					<video controls class="html-video" width="640" height="252"><source src="./resources/video/comb_long2.mp4" type="video/mp4"></video>
+				</th>
+				
+			</tr>
+		</table>
 
   		  <center><h1>Applications</h1></center>
 			To evaluate the effectiveness of our dataset, we perform tasks that are designed to span a variety of application domains, including representation learning, image synthesis, and future prediction.
@@ -332,7 +357,11 @@
 		
 		<center><h1>Acknowledgements</h1></center>
 		We thank Xiaofeng Guo and Yufan Zhang for the extensive help with the GelSight sensor, and thank Daniel Geng, Yuexi Du and Zhaoying Pan for the helpful discussions. This work was supported in part by Cisco Systems.
-
+		
+		<br><br><br>
+		<hr>
+		<br><br><br>
+		<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms" href="http://purl.org/dc/dcmitype/MovingImage" property="dct:title" rel="dct:type">Touch and Go: Learning from Human-Collected Vision and Touch</span> by <span xmlns:cc=“http://creativecommons.org/ns#” property=“cc:attributionName”>Fengyu Yang, Chenyang Ma, Jiacheng Zhang, Jing Zhu, Wenzhen Yuan, Andrew Owens</span> is licensed under a <a rel=“license” href=“http://creativecommons.org/licenses/by/4.0/”>Creative Commons Attribution 4.0 International License</a>
   		  <!-- along with miscellaneous photos. -->
   		  <!-- <br>
   		  <table align=center width=1100px>
