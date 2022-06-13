@@ -307,10 +307,10 @@
 
 			</th>
 		</tr>
-		</table><br>
+		</table>
+		<br><br><br>
 		
 		<center><h3>Untrimmed Videos</h3></center>
-		<br>
 		<table align=center width=95% style="border-collapse:separate; border-spacing:0px 30px;">
 			<tr>
 				<th>
@@ -327,14 +327,21 @@
 			</tr>
 		</table>
 
+		<br><br>
+		<hr>
+		<br><br>
   		  <center><h1>Applications</h1></center>
 			To evaluate the effectiveness of our dataset, we perform tasks that are designed to span a variety of application domains, including representation learning, image synthesis, and future prediction.
 			<center><h3>Multimodal self-supervised representation learning</h3></center>
 			Our goal is to learn a representation that captures the information and correspondences between visual and tactile images, which can be useful for downstream tasks.
 			<br><br><br>
 			
-			<center><h3>Tactile-driven image stylization</h3></center>
-			We propose the task of tactile-driven image stylization: making an image look as though it “feels like” a given touch signal.
+			<center><h3>Tactile-driven image stylization</h3></center> 
+			Both touch and sight convey material properties and geometry. A model that can successfully predict these properties from visuo-tactile data therefore ought to be able to translate between modalities.
+			We propose the task of tactile-driven image stylization: making an image look as though it “feels like” a given touch signal.<br>
+			In the figure below we show results from our model. Our model successfully manipulates
+			images to match tactile inputs, such as by making surfaces rougher or smoother, or by creating
+			“hybrid” materials (e.g., adding grass to a surface).
 			<br><br>
 			<center>
 				<a href="./resources/images/style_trans1.png"><img class="rounded" src = "./resources/images/style_trans1.png" height="500px"></img></href></a><br>
@@ -349,14 +356,24 @@
 
 			<br><br><br>  
 			<center><h3>Multimodal video prediction</h3></center>
-			We evaluate our model for predicting future tactile signals. We compare a tactile-only model to a multimodal visuo-tactile model, and show that the latter obtains better performance.
+			We use our dataset to ask whether visual data can improve our estimates of future tactile signals: i.e., what will this object
+			feel like in a moment?<br>
+			We predict multiple frames by autoregressively feeding our output images back to the original model.
+			We evaluate our model for predicting future tactile signals. In the figure below, we compare a tactile-only model to a multimodal visuo-tactile model, and show that the latter obtains better performance.
+			By incorporating our dataset's visual signal, the model gains a constant performance increase
+			under different evaluation metrics, under both experimental settings. The gap becomes larger for
+			longer time horizon, suggesting that visual information may be more helpful in this case.
 			<br><br>
 			<center>
 				<a href="./resources/images/video_pred1.png"><img class="rounded" src = "./resources/images/video_pred1.png" height="400px" width="1000px"></img></href></a><br>
 			</center>
 		
+		<br><br>
+		<hr>
+		<br><br>
 		<center><h1>Acknowledgements</h1></center>
 		We thank Xiaofeng Guo and Yufan Zhang for the extensive help with the GelSight sensor, and thank Daniel Geng, Yuexi Du and Zhaoying Pan for the helpful discussions. This work was supported in part by Cisco Systems.
+		The webpage template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for <a href="http://richzhang.github.io/colorization/">Colorization</a> project.
 		
 		<br><br><br>
 		<hr>
