@@ -124,7 +124,8 @@
   <body>
     <br>
           <center>
-          	<span style="font-size:42px">Touch and Go</span>
+          	<span style="font-size:36px">Touch and Go: Learning from Human-Collected Vision and Touch</span>
+			<br><br>
 	  		  <table align=center width=700px>
 	  			  <tr>
 	  	              <td align=center width=200px>
@@ -169,39 +170,11 @@
 
 	  		  <table align=center width=650px>
 	  			  <tr>
-	  	              <!-- <td align=center width=150px>
-	  					<center>
-	  						<span style="font-size:24px"><a href='http://demos.algorithmia.com/colorize-photos/'> [Demo]</a>
-		  		  		</center>
-		  		  	  </td>
-	  	              <td align=center width=150px>
-	  					<center>
-	  						<span style="font-size:24px"><a href='https://github.com/richzhang/colorization'> [GitHub]</a></span>
-		  		  		</center>
-		  		  	  </td>
-	  	              <td align=center width=150px>
-	  					<center>
-	  						<span style="font-size:24px"><a href='https://www.youtube.com/watch?v=4xoTD58Wt-0'> [Talk]</a></span>
-		  		  		</center>
-		  		  	  </td>
-	  	              <td align=center width=150px>
-	  					<center>
-	  						<span style="font-size:24px"><a href='https://www.dropbox.com/s/sa8m3y1ymj0ihct/presentation_eccv_release.pptx?dl=0'> [Slides]</a></span>
-		  		  		</center>
-		  		  	  </td>
-	  	              <td align=center width=150px>
-	  					<center>
-	  						<span style="font-size:24px"><a href='https://arxiv.org/abs/1603.08511'> [Paper]</a></span>
-		  		  		</center>
-		  		  	  </td> -->
-
 	  	              <td align=center width=150px>
 	  					<center>
 	  						<span style="font-size:24px"><a href='https://drive.google.com/drive/folders/1NDasyshDCL9aaQzxjn_-Q5MBURRT360B'> [Dataset]</a></span>
 		  		  		</center>
 		  		  	  </td>
-
-		  		  	 </tr>
 	  			  <tr>
 			  </table>
 	  		  <!-- <table align=center width=800px>
@@ -222,7 +195,7 @@
   			  <tr>
   	              <td width=400px>
   					<center>
-  	                	<a href="./resources/images/img1.png"><img class="rounded" src = "./resources/images/img1.png" height="500px"></img></href></a><br>
+  	                	<a href="./resources/images/img1.png"><img class="rounded" src = "./resources/images/teaser.png" height="500px"></img></href></a><br>
 					</center>
   	              </td>
                 </tr>
@@ -252,13 +225,22 @@
 		<table align=center width=850px>
 			<center><h1>Dataset</h1></center>
 	    </table>
-		<br>
+		
 		<center style="font-size:20px"><a href='https://drive.google.com/drive/folders/1NDasyshDCL9aaQzxjn_-Q5MBURRT360B'> [Download Link]</a></center><br>
         <div align=center width=100%>
             <p  style="text-align: left; width: 100%" >
                 <b>Touch and Go Dataset</b> &nbsp &nbsp &nbsp We collect a dataset of natural vision-and-touch signals. Our dataset contains multimodal data
 				recorded by humans, who probe objects in their natural locations with a tactile sensor. To more easily
-				train and analyze models on this dataset, we also collect material labels and identify touch onsets.
+				train and analyze models on this dataset, we also collect material labels and identify touch onsets.<br>
+				The <tt>touch_and_go directory</tt> contains a directory of raw videos, <tt>extract_frame.py</tt> that convert raw videos to frames, and <tt>label.txt</tt> of material labels for onset frames.
+				<br><br>
+				Each raw video folder in the <em>Dataset</em> folder consists of six items:<br><br>
+				&emsp;&emsp;<item><tt>video.mp4</tt>:  Raw RGB video recording the interaction of human probing objects.</item><br>
+				&emsp;&emsp;<item><tt>gelsight.mp4</tt>: Raw GelSight (tactile) video for objects.</item><br>
+				&emsp;&emsp;<item><tt>time1.mp4</tt>:  The recording time for each frame in ''video.mp4''.</item><br>
+				&emsp;&emsp;<item><tt>time2.mp4</tt>:  The recording time for each frame in ''gelsight.mp4''.</item><br>
+				&emsp;&emsp;<item><tt>video_frame</tt>:  The folder containing all the frames in ''video.mp4''. (Generated after running <tt>extract_frame.py</tt>)</item><br>
+				&emsp;&emsp;<item><tt>gelsight_frame</tt>:  The folder containing all the frames in ''gelsight.mp4''. (Generated after running <tt>extract_frame.py</tt>)</item><br>
             </p>
         </div>
 		<br>
@@ -273,28 +255,28 @@
 		<tr>
 			<th style="font-size:20px">Synthetic Fabric</th>
 			<th>
-				<video controls class="html-video" width="480" height="189"><source src="./resources/video/comb4.mp4" type="video/mp4"></video>
+				<video controls class="html-video" width="480" height="189"><source src="./resources/video/fabric.mp4" type="video/mp4"></video>
 			</th>
 		</tr>
 
 		<tr>
 			<th style="font-size:20px">Wood</th>
 			<th>
-				<video controls class="html-video" width="480" height="189"><source src="./resources/video/comb5.mp4" type="video/mp4"></video>
+				<video controls class="html-video" width="480" height="189"><source src="./resources/video/wood.mp4" type="video/mp4"></video>
 			</th>
 		</tr>
 		<tr>
-			<th style="font-size:20px">Wall</th>
+			<th style="font-size:20px">Stone</th>
 
 			<th>
-				<video controls class="html-video" width="480" height="189"><source src="./resources/video/comb1.mp4" type="video/mp4"></video>
+				<video controls class="html-video" width="480" height="189"><source src="./resources/video/stone.mp4" type="video/mp4"></video>
 				<!-- <video controls class="html-video" width="256" height="144"><source src="./resources/video/gel1.mp4" type="video/mp4"></video><br> -->
 			</th>
 		</tr>
 		<tr>
 			<th style="font-size:20px">Grass</th>
 			<th>
-				<video controls class="html-video" width="480" height="189"><source src="./resources/video/comb2.mp4" type="video/mp4"></video>
+				<video controls class="html-video" width="480" height="189"><source src="./resources/video/grass.mp4" type="video/mp4"></video>
 				<!-- <video controls class="html-video" width="256" height="144"><source src="./resources/video/gel2.mp4" type="video/mp4"></video><br> -->
 
 			</th>
@@ -302,7 +284,23 @@
 		<tr>
 			<th style="font-size:20px">Brick</th>
 			<th>
-				<video controls class="html-video" width="480" height="189"><source src="./resources/video/comb3.mp4" type="video/mp4"></video>
+				<video controls class="html-video" width="480" height="189"><source src="./resources/video/brick.mp4" type="video/mp4"></video>
+				<!-- <video controls class="html-video" width="256" height="144"><source src="./resources/video/gel3.mp4" type="video/mp4"></video><br> -->
+
+			</th>
+		</tr>
+		<tr>
+			<th style="font-size:20px">Concrete</th>
+			<th>
+				<video controls class="html-video" width="480" height="189"><source src="./resources/video/concrete.mp4" type="video/mp4"></video>
+				<!-- <video controls class="html-video" width="256" height="144"><source src="./resources/video/gel3.mp4" type="video/mp4"></video><br> -->
+
+			</th>
+		</tr>
+		<tr>
+			<th style="font-size:20px">Tree</th>
+			<th>
+				<video controls class="html-video" width="480" height="189"><source src="./resources/video/tree.mp4" type="video/mp4"></video>
 				<!-- <video controls class="html-video" width="256" height="144"><source src="./resources/video/gel3.mp4" type="video/mp4"></video><br> -->
 
 			</th>
