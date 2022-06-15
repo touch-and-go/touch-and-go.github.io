@@ -113,6 +113,14 @@
 		height: 1px;
 		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 	}
+
+	table {
+		border-collapse: collapse;
+	}
+	.vtable {
+		border-collapse:separate;
+		border-spacing:20px 15px;
+	}
 </style>
 
 <html>
@@ -246,65 +254,79 @@
 		<br>
 	<center><h3>Videos Classified by Labels</h3></center>
 	<br><br>
-	<table align=center width=95%>
+	<table align=center width=95% class="vtable">
 		<tr>
-			<th style="font-size:20px"> <p>Label</p></th>
-			<th style="font-size:20px">Visual Video &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GelSight Video</th>
+			<th style="font-size:16px"> <p>Label</p></th>
+			<th style="font-size:16px">Visual Video &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GelSight Video</th>
+			
+			<th style="font-size:16px"> <p>Label</p></th>
+			<th style="font-size:16px">Visual Video &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GelSight Video</th>
 		</tr>
 
 		<tr>
-			<th style="font-size:20px">Synthetic Fabric</th>
+			<th style="font-size:16px">Synthetic Fabric</th>
 			<th>
-				<video controls class="html-video" width="480" height="189"><source src="./resources/video/fabric.mp4" type="video/mp4"></video>
+				<video controls class="html-video" width="320" height="126"><source src="./resources/video/fabric.mp4" type="video/mp4"></video>
+			</th>
+			
+			<th style="font-size:16px">Wood</th>
+			<th>
+				<video controls class="html-video" width="320" height="126"><source src="./resources/video/wood.mp4" type="video/mp4"></video>
 			</th>
 		</tr>
 
-		<tr>
-			<th style="font-size:20px">Wood</th>
+		<!-- <tr>
+			<th style="font-size:16px">Wood</th>
 			<th>
-				<video controls class="html-video" width="480" height="189"><source src="./resources/video/wood.mp4" type="video/mp4"></video>
+				<video controls class="html-video" width="320" height="126"><source src="./resources/video/wood.mp4" type="video/mp4"></video>
 			</th>
-		</tr>
+		</tr> -->
+		
 		<tr>
-			<th style="font-size:20px">Stone</th>
+			<th style="font-size:16px">Stone</th>
 
 			<th>
-				<video controls class="html-video" width="480" height="189"><source src="./resources/video/stone.mp4" type="video/mp4"></video>
-				<!-- <video controls class="html-video" width="256" height="144"><source src="./resources/video/gel1.mp4" type="video/mp4"></video><br> -->
+				<video controls class="html-video" width="320" height="126"><source src="./resources/video/stone_1.mp4" type="video/mp4"></video>
 			</th>
-		</tr>
-		<tr>
-			<th style="font-size:20px">Grass</th>
+			<th style="font-size:16px">Grass</th>
 			<th>
-				<video controls class="html-video" width="480" height="189"><source src="./resources/video/grass.mp4" type="video/mp4"></video>
-				<!-- <video controls class="html-video" width="256" height="144"><source src="./resources/video/gel2.mp4" type="video/mp4"></video><br> -->
+				<video controls class="html-video" width="320" height="126"><source src="./resources/video/grass.mp4" type="video/mp4"></video>
 
 			</th>
 		</tr>
-		<tr>
-			<th style="font-size:20px">Brick</th>
+		<!-- <tr>
+			<th style="font-size:16px">Grass</th>
 			<th>
-				<video controls class="html-video" width="480" height="189"><source src="./resources/video/brick.mp4" type="video/mp4"></video>
-				<!-- <video controls class="html-video" width="256" height="144"><source src="./resources/video/gel3.mp4" type="video/mp4"></video><br> -->
+				<video controls class="html-video" width="320" height="126"><source src="./resources/video/grass.mp4" type="video/mp4"></video>
+
+			</th>
+		</tr> -->
+		<tr>
+			<th style="font-size:16px">Brick</th>
+			<th>
+				<video controls class="html-video" width="320" height="126"><source src="./resources/video/brick.mp4" type="video/mp4"></video>
+
+			</th>
+			<th style="font-size:16px">Concrete</th>
+			<th>
+				<video controls class="html-video" width="320" height="126"><source src="./resources/video/concrete_1.mp4" type="video/mp4"></video>
 
 			</th>
 		</tr>
-		<tr>
-			<th style="font-size:20px">Concrete</th>
+		<!-- <tr>
+			<th style="font-size:16px">Concrete</th>
 			<th>
-				<video controls class="html-video" width="480" height="189"><source src="./resources/video/concrete.mp4" type="video/mp4"></video>
-				<!-- <video controls class="html-video" width="256" height="144"><source src="./resources/video/gel3.mp4" type="video/mp4"></video><br> -->
+				<video controls class="html-video" width="320" height="126"><source src="./resources/video/concrete.mp4" type="video/mp4"></video>
 
 			</th>
-		</tr>
-		<tr>
-			<th style="font-size:20px">Tree</th>
+		</tr> -->
+		<!-- <tr>
+			<th style="font-size:16px">Tree</th>
 			<th>
-				<video controls class="html-video" width="480" height="189"><source src="./resources/video/tree.mp4" type="video/mp4"></video>
-				<!-- <video controls class="html-video" width="256" height="144"><source src="./resources/video/gel3.mp4" type="video/mp4"></video><br> -->
+				<video controls class="html-video" width="320" height="126"><source src="./resources/video/tree.mp4" type="video/mp4"></video>
 
 			</th>
-		</tr>
+		</tr> -->
 		</table>
 		<br><br><br>
 		
