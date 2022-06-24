@@ -235,29 +235,12 @@
 		
 		<div>
 			<center><h3>Demonstration Video</h3></center>
-			<center>	<video controls class="html-video" width="960" height="504"><source src="./resources/video/fade.mp4" type="video/mp4"></video> </center>
+			<center> <iframe width="960" height="504" src="https://www.youtube.com/embed/3m4EHRjxJbE"> </center>
+</iframe>
 			
 		</div>
 
 		<br><br>
-
-        <div align=center width=100%>
-            <p  style="text-align: left; width: 100%" >
-                <b>Touch and Go Dataset</b> &nbsp &nbsp &nbsp We collect a dataset of natural vision-and-touch signals. Our dataset contains multimodal data
-				recorded by humans, who probe objects in their natural locations with a tactile sensor. To more easily
-				train and analyze models on this dataset, we also collect material labels and identify touch onsets.<br>
-				The <tt>touch_and_go directory</tt> contains a directory of raw videos, <tt>extract_frame.py</tt> that convert raw videos to frames, and <tt>label.txt</tt> of material labels for onset frames.
-				<br><br>
-				Each raw video folder in the <em>Dataset</em> folder consists of six items:<br><br>
-				&emsp;&emsp;<item><tt>video.mp4</tt>:  Raw RGB video recording the interaction of human probing objects.</item><br>
-				&emsp;&emsp;<item><tt>gelsight.mp4</tt>: Raw GelSight (tactile) video for objects.</item><br>
-				&emsp;&emsp;<item><tt>time1.mp4</tt>:  The recording time for each frame in ''video.mp4''.</item><br>
-				&emsp;&emsp;<item><tt>time2.mp4</tt>:  The recording time for each frame in ''gelsight.mp4''.</item><br>
-				&emsp;&emsp;<item><tt>video_frame</tt>:  The folder containing all the frames in ''video.mp4''. (Generated after running <tt>extract_frame.py</tt>)</item><br>
-				&emsp;&emsp;<item><tt>gelsight_frame</tt>:  The folder containing all the frames in ''gelsight.mp4''. (Generated after running <tt>extract_frame.py</tt>)</item><br>
-            </p>
-        </div>
-		<br>
 	<center><h3>Videos Classified by Labels</h3></center>
 	<br><br>
 	<table align=center width=95% class="vtable">
@@ -353,6 +336,24 @@
 			</tr>
 		</table>
 
+		<br><br>
+
+        <div align=center width=100%>
+            <p  style="text-align: left; width: 100%" >
+                <b>Touch and Go Dataset</b> &nbsp &nbsp &nbsp We collect a dataset of natural vision-and-touch signals. Our dataset contains multimodal data
+				recorded by humans, who probe objects in their natural locations with a tactile sensor. To more easily
+				train and analyze models on this dataset, we also collect material labels and identify touch onsets.<br>
+				The <tt>touch_and_go directory</tt> contains a directory of raw videos, <tt>extract_frame.py</tt> that convert raw videos to frames, and <tt>label.txt</tt> of material labels for onset frames.
+				<br><br>
+				Each raw video folder in the <em>Dataset</em> folder consists of six items:<br><br>
+				&emsp;&emsp;<item><tt>video.mp4</tt>:  Raw RGB video recording the interaction of human probing objects.</item><br>
+				&emsp;&emsp;<item><tt>gelsight.mp4</tt>: Raw GelSight (tactile) video for objects.</item><br>
+				&emsp;&emsp;<item><tt>time1.mp4</tt>:  The recording time for each frame in ''video.mp4''.</item><br>
+				&emsp;&emsp;<item><tt>time2.mp4</tt>:  The recording time for each frame in ''gelsight.mp4''.</item><br>
+				&emsp;&emsp;<item><tt>video_frame</tt>:  The folder containing all the frames in ''video.mp4''. (Generated after running <tt>extract_frame.py</tt>)</item><br>
+				&emsp;&emsp;<item><tt>gelsight_frame</tt>:  The folder containing all the frames in ''gelsight.mp4''. (Generated after running <tt>extract_frame.py</tt>)</item><br>
+            </p>
+        </div>
 		<br><br>
 		<hr>
 		<br><br>
