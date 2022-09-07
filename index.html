@@ -14,7 +14,167 @@
 	h1 {
 		font-weight:300;
 	}
+
+	.column {
+		float: left;
+		width: 50%;
+		padding: 0px;
+	  }
+	  
+	  /* Clear floats after image containers */
+	  .row::after {
+		content: "";
+		clear: both;
+		display: table;
+	  }
+
+	  .wrapper { 
+        background:#EFEFEF; 
+        box-shadow: 1px 1px 10px rgb(255, 255, 255); 
+        margin: auto; 
+        text-align: center; 
+        position: relative;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        margin-bottom: 20px !important;
+        width: 400px;
+        padding-top: 5px;
+    }
+    .scrolls { 
+        overflow-x: scroll;
+        overflow-y: hidden;
+        height: 180px;
+    white-space:nowrap
+    } 
+    .imageDiv img { 
+        box-shadow: 1px 1px 10px rgb(255, 255, 255); 
+        margin: 2px;
+        max-height: 50px;
+        cursor: pointer;
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+    vertical-align:top;
+    }
+
+	tr.spaceUnder>td {
+		padding-bottom: 3em;
+	}
+
+
+
+
+    /*
+      Rollover Image
+     */
+	 .figure {
+        position: relative;
+        max-width: 100%;
+    }
+    .figure img.image-hover {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      object-fit: contain;
+      opacity: 0;
+      transition: opacity .2s;
+    }
+    .figure:hover img.image-hover {
+      opacity: 1;
+    }
 	
+	* {box-sizing:border-box}
+
+	/* Slideshow container */
+	.slideshow-container {
+	max-width: 232;
+	position: relative;
+	margin: auto;
+	}
+
+	/* Hide the images by default */
+	.mySlides {
+	display: none;
+	}
+
+	/* Next & previous buttons */
+	.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	}
+
+	/* Position the "next button" to the right */
+	.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+	}
+
+	/* On hover, add a black background color with a little bit see-through */
+	.prev:hover, .next:hover {
+	background-color: rgba(0,0,0,0.8);
+	}
+
+	/* Caption text */
+	.text {
+	color: #f2f2f2;
+	font-size: 15px;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+	text-align: center;
+	}
+
+	/* Number text (1/3 etc) */
+	.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+	}
+
+	/* The dots/bullets/indicators */
+	.dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+	}
+
+	.active, .dot:hover {
+	background-color: #717171;
+	}
+
+	/* Fading animation */
+	.fade {
+	}
+
+	@keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
+	}
+
+
+
+
 	.disclaimerbox {
 		background-color: #eee;		
 		border: 1px solid #eeeeee;
@@ -226,6 +386,282 @@
 
   		  <br><br>
 		  <hr>
+
+
+		  <table align=center style="width:100%">
+			<tr class="spaceUnder">
+				<td style="font-size:20px">Stone</td>
+				<td><a href="./resources/images/stone_eg.png"><img id="stone" class="rounded" src = "./resources/images/stone_eg.png" height="120px"></img></href></a></td>
+				<td>
+					<!-- <div class="wrapper"> -->
+						<img id="stone_img1" src='./resources/images/to_stone/1.png' />
+						<img id="stone_img2" src='./resources/images/to_stone/2.png' />
+						<img id="stone_img3" src='./resources/images/to_stone/3.png' />
+						<img id="stone_img4" src='./resources/images/to_stone/4.png' />
+						<img id="stone_img5" src='./resources/images/to_stone/5.png' />
+					<!-- </div> -->
+				</td>
+			</tr>
+
+			
+			<tr class="spaceUnder">
+				<td style="font-size:20px">Brick</td>
+				<td>
+					<a href="./resources/images/brick_eg.png"><img id="brick" class="rounded" src = "./resources/images/brick_eg.png" height="120px"></img></href></a>
+				</td>
+				<td>
+					<!-- <div class="wrapper"> -->
+						<img id="brick_img1" src='./resources/images/to_brick/1.png' height=113px/>
+						<img id="brick_img2" src='./resources/images/to_brick/2.png' height=113px />
+						<img id="brick_img3" src='./resources/images/to_brick/3.png' height=113px/>
+						<img id="brick_img4" src='./resources/images/to_brick/4.png' height=113px/>
+						<img id="brick_img5" src='./resources/images/to_brick/5.png' height=113px/>
+					<!-- </div> -->
+				</td>
+			</tr>
+
+			<tr class="spaceUnder">
+				<td style="font-size:20px">Concrete</td>
+				<td>
+					<a href="./resources/images/concrete_eg.png"><img id="concrete" class="rounded" src = "./resources/images/concrete_eg.png" height="120px"></img></href></a>
+				</td>
+				<td>
+					<!-- <div class="wrapper"> -->
+						<img id="concrete_img1" src='./resources/images/to_concrete/1.png' height=113px/>
+						<img id="concrete_img2" src='./resources/images/to_concrete/2.png' height=113px />
+						<img id="concrete_img3" src='./resources/images/to_concrete/3.png' height=113px/>
+						<img id="concrete_img4" src='./resources/images/to_concrete/4.png' height=113px/>
+						<img id="concrete_img5" src='./resources/images/to_concrete/5.png' height=113px/>
+					<!-- </div> -->
+				</td>
+			</tr>
+
+			<tr class="spaceUnder">
+				<td style="font-size:20px">Fabric</td>
+				<td>
+					<a href="./resources/images/fabric_eg.png"><img id="fabric" class="rounded" src = "./resources/images/fabric_eg.png" height="120px"></img></href></a>
+				</td>
+				<td>
+					<!-- <div class="wrapper"> -->
+						<img id="fabric_img1" src='./resources/images/to_fabric/1.png' height=113px/>
+						<img id="fabric_img2" src='./resources/images/to_fabric/2.png' height=113px />
+						<img id="fabric_img3" src='./resources/images/to_fabric/3.png' height=113px/>
+						<img id="fabric_img4" src='./resources/images/to_fabric/4.png' height=113px/>
+						<img id="fabric_img5" src='./resources/images/to_fabric/5.png' height=113px/>
+					<!-- </div> -->
+				</td>
+			</tr>
+
+			<tr class="spaceUnder">
+				<td style="font-size:20px">Grass</td>
+				<td>
+					<a href="./resources/images/grass_eg.png"><img id="grass" class="rounded" src = "./resources/images/grass_eg.png" height="120px"></img></href></a>
+				</td>
+				<td>
+					<!-- <div class="wrapper"> -->
+						<img id="grass_img1" src='./resources/images/to_grass/1.png' height=113px/>
+						<img id="grass_img2" src='./resources/images/to_grass/2.png' height=113px />
+						<img id="grass_img3" src='./resources/images/to_grass/3.png' height=113px/>
+						<img id="grass_img4" src='./resources/images/to_grass/4.png' height=113px/>
+						<img id="grass_img5" src='./resources/images/to_grass/5.png' height=113px/>
+					<!-- </div> -->
+				</td>
+			</tr>
+
+			<tr class="spaceUnder">
+				<td style="font-size:20px">Plants</td>
+				<td>
+					<a href="./resources/images/plant_eg.png"><img id="plants" class="rounded" src = "./resources/images/plant_eg.png" height="120px"></img></href></a>
+				</td>
+				<td>
+					<!-- <div class="wrapper"> -->
+						<img id="plants_img1" src='./resources/images/to_plants/1.png' height=113px/>
+						<img id="plants_img2" src='./resources/images/to_plants/2.png' height=113px />
+						<img id="plants_img3" src='./resources/images/to_plants/3.png' height=113px/>
+						<img id="plants_img4" src='./resources/images/to_plants/4.png' height=113px/>
+						<img id="plants_img5" src='./resources/images/to_plants/5.png' height=113px/>
+					<!-- </div> -->
+				</td>
+			</tr>
+
+			<tr class="spaceUnder">
+				<td style="font-size:20px">tree</td>
+				<td>
+					<a href="./resources/images/tree_eg.png"><img id="tree" class="rounded" src = "./resources/images/tree_eg.png" height="120px"></img></href></a>
+				</td>
+				<td>
+					<!-- <div class="wrapper"> -->
+						<img id="tree_img1" src='./resources/images/to_tree/1.png' height=113px/>
+						<img id="tree_img2" src='./resources/images/to_tree/2.png' height=113px />
+						<img id="tree_img3" src='./resources/images/to_tree/3.png' height=113px/>
+						<img id="tree_img4" src='./resources/images/to_tree/4.png' height=113px/>
+						<img id="tree_img5" src='./resources/images/to_tree/5.png' height=113px/>
+					<!-- </div> -->
+				</td>
+			</tr>
+
+		  </table>
+
+
+		<script>
+			const stone = document.getElementById("stone");
+			stone.addEventListener("mouseover", stoneOver);
+			stone.addEventListener("mouseleave", stoneLeave)
+			
+			function stoneOver() {
+			  document.getElementById("stone_img1").src='./resources/images/to_stone/1s.png';
+			  document.getElementById("stone_img2").src='./resources/images/to_stone/2s.png';
+			  document.getElementById("stone_img3").src='./resources/images/to_stone/3s.png';
+			  document.getElementById("stone_img4").src='./resources/images/to_stone/4s.png';
+			  document.getElementById("stone_img5").src='./resources/images/to_stone/5s.png';
+			}
+
+			function stoneLeave() {
+				document.getElementById("stone_img1").src='./resources/images/to_stone/1.png' ;
+				document.getElementById("stone_img2").src='./resources/images/to_stone/2.png' ;
+				document.getElementById("stone_img3").src='./resources/images/to_stone/3.png' ;
+				document.getElementById("stone_img4").src='./resources/images/to_stone/4.png' ;
+				document.getElementById("stone_img5").src='./resources/images/to_stone/5.png' ;
+			}
+		</script>
+
+		<script>
+			const brick = document.getElementById("brick");
+			brick.addEventListener("mouseover", brickOver);
+			brick.addEventListener("mouseleave", brickLeave)
+			
+			function brickOver() {
+			  document.getElementById("brick_img1").src='./resources/images/to_brick/1s.png';
+			  document.getElementById("brick_img2").src='./resources/images/to_brick/2s.png';
+			  document.getElementById("brick_img3").src='./resources/images/to_brick/3s.png';
+			  document.getElementById("brick_img4").src='./resources/images/to_brick/4s.png';
+			  document.getElementById("brick_img5").src='./resources/images/to_brick/5s.png';
+			}
+
+			function brickLeave() {
+				document.getElementById("brick_img1").src='./resources/images/to_brick/1.png' ;
+				document.getElementById("brick_img2").src='./resources/images/to_brick/2.png' ;
+				document.getElementById("brick_img3").src='./resources/images/to_brick/3.png' ;
+				document.getElementById("brick_img4").src='./resources/images/to_brick/4.png' ;
+				document.getElementById("brick_img5").src='./resources/images/to_brick/5.png' ;
+			}
+		</script>
+
+		<script>
+			const concrete = document.getElementById("concrete");
+			concrete.addEventListener("mouseover", concreteOver);
+			concrete.addEventListener("mouseleave", concreteLeave)
+			
+			function concreteOver() {
+			  document.getElementById("concrete_img1").src='./resources/images/to_concrete/1s.png';
+			  document.getElementById("concrete_img2").src='./resources/images/to_concrete/2s.png';
+			  document.getElementById("concrete_img3").src='./resources/images/to_concrete/3s.png';
+			  document.getElementById("concrete_img4").src='./resources/images/to_concrete/4s.png';
+			  document.getElementById("concrete_img5").src='./resources/images/to_concrete/5s.png';
+			}
+
+			function concreteLeave() {
+				document.getElementById("concrete_img1").src='./resources/images/to_concrete/1.png' ;
+				document.getElementById("concrete_img2").src='./resources/images/to_concrete/2.png' ;
+				document.getElementById("concrete_img3").src='./resources/images/to_concrete/3.png' ;
+				document.getElementById("concrete_img4").src='./resources/images/to_concrete/4.png' ;
+				document.getElementById("concrete_img5").src='./resources/images/to_concrete/5.png' ;
+			}
+		</script>
+
+		<script>
+			const fabric = document.getElementById("fabric");
+			fabric.addEventListener("mouseover", fabricOver);
+			fabric.addEventListener("mouseleave", fabricLeave)
+			
+			function fabricOver() {
+			  document.getElementById("fabric_img1").src='./resources/images/to_fabric/1s.png';
+			  document.getElementById("fabric_img2").src='./resources/images/to_fabric/2s.png';
+			  document.getElementById("fabric_img3").src='./resources/images/to_fabric/3s.png';
+			  document.getElementById("fabric_img4").src='./resources/images/to_fabric/4s.png';
+			  document.getElementById("fabric_img5").src='./resources/images/to_fabric/5s.png';
+			}
+
+			function fabricLeave() {
+				document.getElementById("fabric_img1").src='./resources/images/to_fabric/1.png' ;
+				document.getElementById("fabric_img2").src='./resources/images/to_fabric/2.png' ;
+				document.getElementById("fabric_img3").src='./resources/images/to_fabric/3.png' ;
+				document.getElementById("fabric_img4").src='./resources/images/to_fabric/4.png' ;
+				document.getElementById("fabric_img5").src='./resources/images/to_fabric/5.png' ;
+			}
+		</script>
+
+		<script>
+			const grass = document.getElementById("grass");
+			grass.addEventListener("mouseover", grassOver);
+			grass.addEventListener("mouseleave", grassLeave)
+			
+			function grassOver() {
+			  document.getElementById("grass_img1").src='./resources/images/to_grass/1s.png';
+			  document.getElementById("grass_img2").src='./resources/images/to_grass/2s.png';
+			  document.getElementById("grass_img3").src='./resources/images/to_grass/3s.png';
+			  document.getElementById("grass_img4").src='./resources/images/to_grass/4s.png';
+			  document.getElementById("grass_img5").src='./resources/images/to_grass/5s.png';
+			}
+
+			function grassLeave() {
+				document.getElementById("grass_img1").src='./resources/images/to_grass/1.png' ;
+				document.getElementById("grass_img2").src='./resources/images/to_grass/2.png' ;
+				document.getElementById("grass_img3").src='./resources/images/to_grass/3.png' ;
+				document.getElementById("grass_img4").src='./resources/images/to_grass/4.png' ;
+				document.getElementById("grass_img5").src='./resources/images/to_grass/5.png' ;
+			}
+		</script>
+
+		<script>
+			const plants = document.getElementById("plants");
+			plants.addEventListener("mouseover", plantsOver);
+			plants.addEventListener("mouseleave", plantsLeave)
+			
+			function plantsOver() {
+			  document.getElementById("plants_img1").src='./resources/images/to_plants/1s.png';
+			  document.getElementById("plants_img2").src='./resources/images/to_plants/2s.png';
+			  document.getElementById("plants_img3").src='./resources/images/to_plants/3s.png';
+			  document.getElementById("plants_img4").src='./resources/images/to_plants/4s.png';
+			  document.getElementById("plants_img5").src='./resources/images/to_plants/5s.png';
+			}
+
+			function plantsLeave() {
+				document.getElementById("plants_img1").src='./resources/images/to_plants/1.png' ;
+				document.getElementById("plants_img2").src='./resources/images/to_plants/2.png' ;
+				document.getElementById("plants_img3").src='./resources/images/to_plants/3.png' ;
+				document.getElementById("plants_img4").src='./resources/images/to_plants/4.png' ;
+				document.getElementById("plants_img5").src='./resources/images/to_plants/5.png' ;
+			}
+		</script>
+
+		<script>
+			const tree = document.getElementById("tree");
+			tree.addEventListener("mouseover", treeOver);
+			tree.addEventListener("mouseleave", treeLeave)
+			
+			function treeOver() {
+			  document.getElementById("tree_img1").src='./resources/images/to_tree/1s.png';
+			  document.getElementById("tree_img2").src='./resources/images/to_tree/2s.png';
+			  document.getElementById("tree_img3").src='./resources/images/to_tree/3s.png';
+			  document.getElementById("tree_img4").src='./resources/images/to_tree/4s.png';
+			  document.getElementById("tree_img5").src='./resources/images/to_tree/5s.png';
+			}
+
+			function treeLeave() {
+				document.getElementById("tree_img1").src='./resources/images/to_tree/1.png' ;
+				document.getElementById("tree_img2").src='./resources/images/to_tree/2.png' ;
+				document.getElementById("tree_img3").src='./resources/images/to_tree/3.png' ;
+				document.getElementById("tree_img4").src='./resources/images/to_tree/4.png' ;
+				document.getElementById("tree_img5").src='./resources/images/to_tree/5.png' ;
+			}
+		</script>
+
+
+
+		  
+
+
 
 
 		<table align=center width=850px>
