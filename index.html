@@ -9,44 +9,30 @@
 		margin-left: auto;
 		margin-right: auto;
 		width: 1100px;
+		background-color : #EFEFEF;
 	}
-	
+	.content{
+    width : 1000px;
+    padding : 25px 50px;
+    margin : 25px auto;
+    background-color : #fff;
+    box-shadow: 0px 0px 10px #999;
+    border-radius: 15px; 
+	}
 	h1 {
 		font-weight:300;
 	}
 
-	.column {
-		float: left;
-		width: 50%;
-		padding: 0px;
+	.row {
+		display: flex;
 	  }
 	  
-	  /* Clear floats after image containers */
-	  .row::after {
-		content: "";
-		clear: both;
-		display: table;
-	  }
+	/* Create three equal columns that sits next to each other */
+	.column {
+	flex: 50%;
+	padding: 5px;
+	}
 
-	  .wrapper { 
-        background:#EFEFEF; 
-        box-shadow: 1px 1px 10px rgb(255, 255, 255); 
-        margin: auto; 
-        text-align: center; 
-        position: relative;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
-        margin-bottom: 20px !important;
-        width: 400px;
-        padding-top: 5px;
-    }
-    .scrolls { 
-        overflow-x: scroll;
-        overflow-y: hidden;
-        height: 180px;
-    white-space:nowrap
-    } 
     .imageDiv img { 
         box-shadow: 1px 1px 10px rgb(255, 255, 255); 
         margin: 2px;
@@ -290,48 +276,36 @@
   </head>
 
   <body>
-    <br>
+	<div class="content">
+		<br>
           <center>
           	<span style="font-size:36px">Touch and Go: Learning from Human-Collected Vision and Touch</span>
 			<br><br>
 	  		  <table align=center width=700px>
 	  			  <tr>
 	  	              <td align=center width=200px>
-	  					<center>
-	  						<span style="font-size:24px">Fengyu Yang*</a></span>
-		  		  		</center>
+	  					<center><span style="font-size:24px">Fengyu Yang*</a></span></center>
 		  		  	  </td>
 	  	              <td align=center width=200px>
-	  					<center>
-	  						<span style="font-size:24px">Chenyang Ma*</a></span>
-		  		  		</center>
+	  					<center><span style="font-size:24px">Chenyang Ma*</a></span>	</center>
 		  		  	  </td>
 	  	              <td align=center width=200px>
-	  					<center>
-	  						<span style="font-size:24px">Jiacheng Zhang</a></span>
-		  		  		</center>
+	  					<center><span style="font-size:24px">Jiacheng Zhang</a></span></center>
 		  		  	  </td>
 					  
 					  <td align=center width=200px>
-						<center>
-							<span style="font-size:24px">Jing Zhu</a></span>
-							</center>
+						<center><span style="font-size:24px">Jing Zhu</a></span></center>
 					  </td>
 
 			  </table>
 			  <table align=center width=400px>
 				  <tr>
-
 					<td align=center width=200px>
-					  <center>
-						  <span style="font-size:24px">Wenzhen Yuan</a></span>
-						  </center>
+					  <center><span style="font-size:24px">Wenzhen Yuan</a></span></center>
 					</td>
 
 					<td align=center width=200px>
-					  <center>
-						  <span style="font-size:24px">Andrew Owens</a></span>
-						  </center>
+					  <center><span style="font-size:24px">Andrew Owens</a></span></center>
 					</td>
 			</table>
           		<!-- <span style="font-size:30px">ECCV 2016.</span> -->
@@ -340,346 +314,67 @@
 	  			  <tr>
 	  	              <td align=center width=150px>
 	  					<center>
+							<span style="font-size:24px"><a href='https://openreview.net/forum?id=ZZ3FeSSPPblo'> [Paper]</a></span>
+							&nbsp&nbsp&nbsp&nbsp&nbsp
 	  						<span style="font-size:24px"><a href='https://drive.google.com/drive/folders/1NDasyshDCL9aaQzxjn_-Q5MBURRT360B'> [Dataset]</a></span>
+							  &nbsp&nbsp&nbsp&nbsp&nbsp
 		  		  		</center>
 		  		  	  </td>
 	  			  <tr>
 			  </table>
-	  		  <!-- <table align=center width=800px>
-	  	              <td align=center width=150px>
-	  					<center>
-	  						<span style="font-size:18px"><b>Also check out our new work on <a href='https://richzhang.github.io/InteractiveColorization'> Interactive Deep Colorization</a>!</b>
-		  		  		</center>
-		  		  	  </td>
-		  		  	 </tr>
-			  </table> -->
           </center>
+		  <p><strong>Quick Jump:</strong></p>
+			<ol>
+				<li><a href="#overview">Overview</a></li>
+				<li><a href="#demonstration video">Demonstration Video</a></li>
+				<li><a href="#dataset">Dataset</a></li>
+				<li><a href="#applications">Applications</a></li>
+				<li><a href="#comparison">Comparison to Other Datasets</a></li>
+			</ol>
+	</div>
+    
 
-<!--   		  <br><br>
-		  <hr> -->
-
-  		  <br>
-  		  <table align=center width=850px>
-  			  <tr>
-  	              <td width=400px>
-  					<center>
-  	                	<a href="./resources/images/teaser-v3-1.png"><img class="rounded" src = "./resources/images/teaser-v3-1.png" height="500px"></img></href></a><br>
-					</center>
-  	              </td>
-                </tr>
-  	              <td width=400px>
-  					<center>
-  	                	<span style="font-size:14px"><i>We collect a dataset of real-world visual and touch data. (a) Humans walk through a large number of scenes, probing objects around them with a touch sensor and recording video. We apply this dataset to: (b) learning tactile features through self-supervision, by associating touch with sight, (c) manipulating an image to match the tactile signal (e.g., restyling a smooth surface to match the tactile signal for a rough rock, whose photo we show for reference), (d) predicting future tactile signals from visuo-tactile inputs.</i>
-					</center>
-  	              </td>
-
-  		  </table>
-		
-		  	<br><br>
-			<div>
-				<center><h1>Demonstration Video</h3></center>
-				<center> <iframe width="960" height="504" src="https://www.youtube.com/embed/6kdPmmWrGz4"> </center></iframe>
-				
-			</div>
-
-  		  <table align=center width=850px>
-	  		  <center><h1>Abstract</h1></center>
-		  </table>
-
-			Correlating vision with touch is essential for performing physical interactions, and understanding material properties. Learning these correlations, however, has proven challenging, since existing large-scale datasets have not captured the full diversity real-world vision and touch. To address this shortcoming, we propose a dataset for multimodal visuo-tactile learning called Touch and Go, in which human data collectors probe objects in natural environments with tactile sensors, while recording egocentric video. The objects and scenes in the resulting dataset are significantly more diverse than prior efforts, making it well-suited to a variety of tasks that involve understanding materials and physical interactions. To demonstrate its effectiveness, we successfully apply it to a variety of tasks: 1) self-supervised visuo-tactile feature learning, 2) the novel task of tactile-driven image stylization, i.e., making an object look as though it were ''felt like'' a given tactile input, and 3) predicting future frames of a tactile signal from visuo-tactile inputs.
-
-<!-- 					Given a grayscale photograph as input, this paper attacks the problem of hallucinating a <i>plausible</i> color version of the photograph. This problem is clearly underconstrained, so previous approaches have either relied on significant user interaction or resulted in desaturated colorizations. We propose a fully automatic approach that produces vibrant and realistic colorizations. We embrace the underlying uncertainty of the problem by posing it as a classification task and explore using class-rebalancing at training time to increase the diversity of colors in the result. The system is implemented as a feed-forward operation in a CNN at test time and is trained on over a million color images. We evaluate our algorithm using a "colorization Turing test", asking human subjects to choose between a generated and ground truth color image. Our method successfully fools humans 20% of the time, significantly higher than previous methods. -->
-
-  		  <br><br>
-		  <hr>
-
-		  
-		  <center><h1>Stylization</h1></center>
-
-		  <table align=center style="width:100%">
-			<tr class="spaceUnder">
-				<td style="font-size:20px">Stone</td>
-				<td><a href="./resources/images/stone_eg.png"><img id="stone" class="rounded" src = "./resources/images/stone_eg.png" height="120px"></img></href></a></td>
-				<td>
-					<!-- <div class="wrapper"> -->
-						<img id="stone_img1" src='./resources/images/to_stone/1.png' />
-						<img id="stone_img2" src='./resources/images/to_stone/2.png' />
-						<img id="stone_img3" src='./resources/images/to_stone/3.png' />
-						<img id="stone_img4" src='./resources/images/to_stone/4.png' />
-						<img id="stone_img5" src='./resources/images/to_stone/5.png' />
-					<!-- </div> -->
-				</td>
-			</tr>
-
-			
-			<!-- <tr class="spaceUnder">
-				<td style="font-size:20px">Brick</td>
-				<td>
-					<a href="./resources/images/brick_eg.png"><img id="brick" class="rounded" src = "./resources/images/brick_eg.png" height="120px"></img></href></a>
-				</td>
-				<td>
-						<img id="brick_img1" src='./resources/images/to_brick/1.png' height=113px/>
-						<img id="brick_img2" src='./resources/images/to_brick/2.png' height=113px />
-						<img id="brick_img3" src='./resources/images/to_brick/3.png' height=113px/>
-						<img id="brick_img4" src='./resources/images/to_brick/4.png' height=113px/>
-						<img id="brick_img5" src='./resources/images/to_brick/5.png' height=113px/>
-				</td>
-			</tr> -->
-
-			<tr class="spaceUnder">
-				<td style="font-size:20px">Concrete</td>
-				<td>
-					<a href="./resources/images/concrete_eg.png"><img id="concrete" class="rounded" src = "./resources/images/concrete_eg.png" height="120px"></img></href></a>
-				</td>
-				<td>
-					<!-- <div class="wrapper"> -->
-						<img id="concrete_img1" src='./resources/images/to_concrete/1.png' height=113px/>
-						<img id="concrete_img2" src='./resources/images/to_concrete/2.png' height=113px />
-						<img id="concrete_img3" src='./resources/images/to_concrete/3.png' height=113px/>
-						<img id="concrete_img4" src='./resources/images/to_concrete/4.png' height=113px/>
-						<img id="concrete_img5" src='./resources/images/to_concrete/5.png' height=113px/>
-					<!-- </div> -->
-				</td>
-			</tr>
-
-			<tr class="spaceUnder">
-				<td style="font-size:20px">Fabric</td>
-				<td>
-					<a href="./resources/images/fabric_eg.png"><img id="fabric" class="rounded" src = "./resources/images/fabric_eg.png" height="120px"></img></href></a>
-				</td>
-				<td>
-					<!-- <div class="wrapper"> -->
-						<img id="fabric_img1" src='./resources/images/to_fabric/1.png' height=113px/>
-						<img id="fabric_img2" src='./resources/images/to_fabric/2.png' height=113px />
-						<img id="fabric_img3" src='./resources/images/to_fabric/3.png' height=113px/>
-						<img id="fabric_img4" src='./resources/images/to_fabric/4.png' height=113px/>
-						<img id="fabric_img5" src='./resources/images/to_fabric/5.png' height=113px/>
-					<!-- </div> -->
-				</td>
-			</tr>
-
-			<tr class="spaceUnder">
-				<td style="font-size:20px">Grass</td>
-				<td>
-					<a href="./resources/images/grass_eg.png"><img id="grass" class="rounded" src = "./resources/images/grass_eg.png" height="120px"></img></href></a>
-				</td>
-				<td>
-					<!-- <div class="wrapper"> -->
-						<img id="grass_img1" src='./resources/images/to_grass/1.png' height=113px/>
-						<img id="grass_img2" src='./resources/images/to_grass/2.png' height=113px />
-						<img id="grass_img3" src='./resources/images/to_grass/3.png' height=113px/>
-						<img id="grass_img4" src='./resources/images/to_grass/4.png' height=113px/>
-						<img id="grass_img5" src='./resources/images/to_grass/5.png' height=113px/>
-					<!-- </div> -->
-				</td>
-			</tr>
-
-			<!-- <tr class="spaceUnder">
-				<td style="font-size:20px">Plants</td>
-				<td>
-					<a href="./resources/images/plant_eg.png"><img id="plants" class="rounded" src = "./resources/images/plant_eg.png" height="120px"></img></href></a>
-				</td>
-				<td>
-						<img id="plants_img1" src='./resources/images/to_plants/1.png' height=113px/>
-						<img id="plants_img2" src='./resources/images/to_plants/2.png' height=113px />
-						<img id="plants_img3" src='./resources/images/to_plants/3.png' height=113px/>
-						<img id="plants_img4" src='./resources/images/to_plants/4.png' height=113px/>
-						<img id="plants_img5" src='./resources/images/to_plants/5.png' height=113px/>
-				</td>
-			</tr> -->
-
-			<!-- <tr class="spaceUnder">
-				<td style="font-size:20px">Tree</td>
-				<td>
-					<a href="./resources/images/tree_eg.png"><img id="tree" class="rounded" src = "./resources/images/tree_eg.png" height="120px"></img></href></a>
-				</td>
-				<td>
-						<img id="tree_img1" src='./resources/images/to_tree/1.png' height=113px/>
-						<img id="tree_img2" src='./resources/images/to_tree/2.png' height=113px />
-						<img id="tree_img3" src='./resources/images/to_tree/3.png' height=113px/>
-						<img id="tree_img4" src='./resources/images/to_tree/4.png' height=113px/>
-						<img id="tree_img5" src='./resources/images/to_tree/5.png' height=113px/>
-				</td>
-			</tr> -->
-
-		  </table>
-
-
-		<script>
-			const stone = document.getElementById("stone");
-			stone.addEventListener("mouseover", stoneOver);
-			stone.addEventListener("mouseleave", stoneLeave)
-			
-			function stoneOver() {
-			  document.getElementById("stone_img1").src='./resources/images/to_stone/1s.png';
-			  document.getElementById("stone_img2").src='./resources/images/to_stone/2s.png';
-			  document.getElementById("stone_img3").src='./resources/images/to_stone/3s.png';
-			  document.getElementById("stone_img4").src='./resources/images/to_stone/4s.png';
-			  document.getElementById("stone_img5").src='./resources/images/to_stone/5s.png';
-			}
-
-			function stoneLeave() {
-				document.getElementById("stone_img1").src='./resources/images/to_stone/1.png' ;
-				document.getElementById("stone_img2").src='./resources/images/to_stone/2.png' ;
-				document.getElementById("stone_img3").src='./resources/images/to_stone/3.png' ;
-				document.getElementById("stone_img4").src='./resources/images/to_stone/4.png' ;
-				document.getElementById("stone_img5").src='./resources/images/to_stone/5.png' ;
-			}
-		</script>
-
-		<script>
-			const brick = document.getElementById("brick");
-			brick.addEventListener("mouseover", brickOver);
-			brick.addEventListener("mouseleave", brickLeave)
-			
-			function brickOver() {
-			  document.getElementById("brick_img1").src='./resources/images/to_brick/1s.png';
-			  document.getElementById("brick_img2").src='./resources/images/to_brick/2s.png';
-			  document.getElementById("brick_img3").src='./resources/images/to_brick/3s.png';
-			  document.getElementById("brick_img4").src='./resources/images/to_brick/4s.png';
-			  document.getElementById("brick_img5").src='./resources/images/to_brick/5s.png';
-			}
-
-			function brickLeave() {
-				document.getElementById("brick_img1").src='./resources/images/to_brick/1.png' ;
-				document.getElementById("brick_img2").src='./resources/images/to_brick/2.png' ;
-				document.getElementById("brick_img3").src='./resources/images/to_brick/3.png' ;
-				document.getElementById("brick_img4").src='./resources/images/to_brick/4.png' ;
-				document.getElementById("brick_img5").src='./resources/images/to_brick/5.png' ;
-			}
-		</script>
-
-		<script>
-			const concrete = document.getElementById("concrete");
-			concrete.addEventListener("mouseover", concreteOver);
-			concrete.addEventListener("mouseleave", concreteLeave)
-			
-			function concreteOver() {
-			  document.getElementById("concrete_img1").src='./resources/images/to_concrete/1s.png';
-			  document.getElementById("concrete_img2").src='./resources/images/to_concrete/2s.png';
-			  document.getElementById("concrete_img3").src='./resources/images/to_concrete/3s.png';
-			  document.getElementById("concrete_img4").src='./resources/images/to_concrete/4s.png';
-			  document.getElementById("concrete_img5").src='./resources/images/to_concrete/5s.png';
-			}
-
-			function concreteLeave() {
-				document.getElementById("concrete_img1").src='./resources/images/to_concrete/1.png' ;
-				document.getElementById("concrete_img2").src='./resources/images/to_concrete/2.png' ;
-				document.getElementById("concrete_img3").src='./resources/images/to_concrete/3.png' ;
-				document.getElementById("concrete_img4").src='./resources/images/to_concrete/4.png' ;
-				document.getElementById("concrete_img5").src='./resources/images/to_concrete/5.png' ;
-			}
-		</script>
-
-		<script>
-			const fabric = document.getElementById("fabric");
-			fabric.addEventListener("mouseover", fabricOver);
-			fabric.addEventListener("mouseleave", fabricLeave)
-			
-			function fabricOver() {
-			  document.getElementById("fabric_img1").src='./resources/images/to_fabric/1s.png';
-			  document.getElementById("fabric_img2").src='./resources/images/to_fabric/2s.png';
-			  document.getElementById("fabric_img3").src='./resources/images/to_fabric/3s.png';
-			  document.getElementById("fabric_img4").src='./resources/images/to_fabric/4s.png';
-			  document.getElementById("fabric_img5").src='./resources/images/to_fabric/5s.png';
-			}
-
-			function fabricLeave() {
-				document.getElementById("fabric_img1").src='./resources/images/to_fabric/1.png' ;
-				document.getElementById("fabric_img2").src='./resources/images/to_fabric/2.png' ;
-				document.getElementById("fabric_img3").src='./resources/images/to_fabric/3.png' ;
-				document.getElementById("fabric_img4").src='./resources/images/to_fabric/4.png' ;
-				document.getElementById("fabric_img5").src='./resources/images/to_fabric/5.png' ;
-			}
-		</script>
-
-		<script>
-			const grass = document.getElementById("grass");
-			grass.addEventListener("mouseover", grassOver);
-			grass.addEventListener("mouseleave", grassLeave)
-			
-			function grassOver() {
-			  document.getElementById("grass_img1").src='./resources/images/to_grass/1s.png';
-			  document.getElementById("grass_img2").src='./resources/images/to_grass/2s.png';
-			  document.getElementById("grass_img3").src='./resources/images/to_grass/3s.png';
-			  document.getElementById("grass_img4").src='./resources/images/to_grass/4s.png';
-			  document.getElementById("grass_img5").src='./resources/images/to_grass/5s.png';
-			}
-
-			function grassLeave() {
-				document.getElementById("grass_img1").src='./resources/images/to_grass/1.png' ;
-				document.getElementById("grass_img2").src='./resources/images/to_grass/2.png' ;
-				document.getElementById("grass_img3").src='./resources/images/to_grass/3.png' ;
-				document.getElementById("grass_img4").src='./resources/images/to_grass/4.png' ;
-				document.getElementById("grass_img5").src='./resources/images/to_grass/5.png' ;
-			}
-		</script>
-
-		<script>
-			const plants = document.getElementById("plants");
-			plants.addEventListener("mouseover", plantsOver);
-			plants.addEventListener("mouseleave", plantsLeave)
-			
-			function plantsOver() {
-			  document.getElementById("plants_img1").src='./resources/images/to_plants/1s.png';
-			  document.getElementById("plants_img2").src='./resources/images/to_plants/2s.png';
-			  document.getElementById("plants_img3").src='./resources/images/to_plants/3s.png';
-			  document.getElementById("plants_img4").src='./resources/images/to_plants/4s.png';
-			  document.getElementById("plants_img5").src='./resources/images/to_plants/5s.png';
-			}
-
-			function plantsLeave() {
-				document.getElementById("plants_img1").src='./resources/images/to_plants/1.png' ;
-				document.getElementById("plants_img2").src='./resources/images/to_plants/2.png' ;
-				document.getElementById("plants_img3").src='./resources/images/to_plants/3.png' ;
-				document.getElementById("plants_img4").src='./resources/images/to_plants/4.png' ;
-				document.getElementById("plants_img5").src='./resources/images/to_plants/5.png' ;
-			}
-		</script>
-
-		<script>
-			const tree = document.getElementById("tree");
-			tree.addEventListener("mouseover", treeOver);
-			tree.addEventListener("mouseleave", treeLeave)
-			
-			function treeOver() {
-			  document.getElementById("tree_img1").src='./resources/images/to_tree/1s.png';
-			  document.getElementById("tree_img2").src='./resources/images/to_tree/2s.png';
-			  document.getElementById("tree_img3").src='./resources/images/to_tree/3s.png';
-			  document.getElementById("tree_img4").src='./resources/images/to_tree/4s.png';
-			  document.getElementById("tree_img5").src='./resources/images/to_tree/5s.png';
-			}
-
-			function treeLeave() {
-				document.getElementById("tree_img1").src='./resources/images/to_tree/1.png' ;
-				document.getElementById("tree_img2").src='./resources/images/to_tree/2.png' ;
-				document.getElementById("tree_img3").src='./resources/images/to_tree/3.png' ;
-				document.getElementById("tree_img4").src='./resources/images/to_tree/4.png' ;
-				document.getElementById("tree_img5").src='./resources/images/to_tree/5.png' ;
-			}
-		</script>
-
-
-
-		  
-
-
-
-
+	<div class="content" id="overview">
 		<table align=center width=850px>
-			<center><h1>Dataset</h1></center>
-	    </table>
-		<center style="font-size:20px"><a href='https://drive.google.com/drive/folders/1NDasyshDCL9aaQzxjn_-Q5MBURRT360B'> [Download Link]</a></center><br>
+			<center><h1>Overview</h1></center>
+		</table>
 
+		We propose a dataset for multimodal visuo-tactile learning called Touch and Go, in which human data collectors probe objects in natural environments with tactile sensors, while recording egocentric video. 
+		<br>We successfully apply it to a variety of tasks: 1) self-supervised visuo-tactile feature learning, 2) the novel task of tactile-driven image stylization, i.e., making an object look as though it were ''felt like'' a given tactile input, and 3) predicting future frames of a tactile signal from visuo-tactile inputs.
+		
+		<center><h3>Human-Powered Collecting</h3></center>
+		<div class="row">
 
-		<br><br>
+			<div class="column">
+				<video controls class="html-video" width="512" height="201.6"><source src="./resources/video/comb_long1.mp4" type="video/mp4"></video>
+				<br><br>
+				<video controls class="html-video" width="512" height="201.6"><source src="./resources/video/comb_long2.mp4" type="video/mp4"></video>		
+			</div>
+			<div class="column">	
+				<img id="human_collect" src='./resources/images/human_collect2.jpg' width="300" height="400"/>
+			</div>
+		</div>
+
+		
+	</div>
+
+		  
+
+	<div class="content" id="demonstration video">
+		<center><h1>Demonstration Video</h3></center>
+		<iframe width="920" height="483" src="https://www.youtube.com/embed/6kdPmmWrGz4"> </iframe>
+	</div>
+
+	<div class="content" id="dataset">
+	<table align=center width=850px>
+		<center><h1>Dataset</h1></center>
+	</table>
+	<center style="font-size:20px"><a href='https://drive.google.com/drive/folders/1NDasyshDCL9aaQzxjn_-Q5MBURRT360B'> [Download Link]</a></center><br>
 	<center><h3>Videos Classified by Labels</h3></center>
-	<br><br>
 	<table align=center width=95% class="vtable">
 		<tr>
 			<th style="font-size:16px"> <p>Label</p></th>
 			<th style="font-size:16px">Visual Video &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GelSight Video</th>
-			
 			<th style="font-size:16px"> <p>Label</p></th>
 			<th style="font-size:16px">Visual Video &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GelSight Video</th>
 		</tr>
@@ -695,13 +390,6 @@
 				<video controls class="html-video" width="320" height="126"><source src="./resources/video/wood.mp4" type="video/mp4"></video>
 			</th>
 		</tr>
-
-		<!-- <tr>
-			<th style="font-size:16px">Wood</th>
-			<th>
-				<video controls class="html-video" width="320" height="126"><source src="./resources/video/wood.mp4" type="video/mp4"></video>
-			</th>
-		</tr> -->
 		
 		<tr>
 			<th style="font-size:16px">Stone</th>
@@ -712,16 +400,9 @@
 			<th style="font-size:16px">Grass</th>
 			<th>
 				<video controls class="html-video" width="320" height="126"><source src="./resources/video/grass.mp4" type="video/mp4"></video>
-
 			</th>
 		</tr>
-		<!-- <tr>
-			<th style="font-size:16px">Grass</th>
-			<th>
-				<video controls class="html-video" width="320" height="126"><source src="./resources/video/grass.mp4" type="video/mp4"></video>
 
-			</th>
-		</tr> -->
 		<tr>
 			<th style="font-size:16px">Brick</th>
 			<th>
@@ -731,44 +412,12 @@
 			<th style="font-size:16px">Concrete</th>
 			<th>
 				<video controls class="html-video" width="320" height="126"><source src="./resources/video/concrete_1.mp4" type="video/mp4"></video>
-
 			</th>
 		</tr>
-		<!-- <tr>
-			<th style="font-size:16px">Concrete</th>
-			<th>
-				<video controls class="html-video" width="320" height="126"><source src="./resources/video/concrete.mp4" type="video/mp4"></video>
 
-			</th>
-		</tr> -->
-		<!-- <tr>
-			<th style="font-size:16px">Tree</th>
-			<th>
-				<video controls class="html-video" width="320" height="126"><source src="./resources/video/tree.mp4" type="video/mp4"></video>
-
-			</th>
-		</tr> -->
 		</table>
 		<br><br><br>
 		
-		<center><h3>Untrimmed Videos</h3></center>
-		<table align=center width=95% style="border-collapse:separate; border-spacing:0px 30px;">
-			<tr>
-				<th>
-					<video controls class="html-video" width="640" height="252"><source src="./resources/video/comb_long1.mp4" type="video/mp4"></video>
-				</th>
-				
-			</tr>
-
-			<tr>
-				<th>
-					<video controls class="html-video" width="640" height="252"><source src="./resources/video/comb_long2.mp4" type="video/mp4"></video>
-				</th>
-				
-			</tr>
-		</table>
-
-		<br><br>
 
         <div align=center width=100%>
             <p  style="text-align: left; width: 100%" >
@@ -786,9 +435,20 @@
 				&emsp;&emsp;<item><tt>gelsight_frame</tt>:  The folder containing all the frames in ''gelsight.mp4''. (Generated after running <tt>extract_frame.py</tt>)</item><br>
             </p>
         </div>
-		<br><br>
-		<hr>
-		<br><br>
+	</div>
+
+		  
+
+
+
+
+		  
+
+
+
+
+	
+	<div class="content" id="applications">
   		  <center><h1>Applications</h1></center>
 			To evaluate the effectiveness of our dataset, we perform tasks that are designed to span a variety of application domains, including representation learning, image synthesis, and future prediction.
 
@@ -799,18 +459,264 @@
 			images to match tactile inputs, such as by making surfaces rougher or smoother, or by creating
 			“hybrid” materials (e.g., adding grass to a surface).
 			<br><br>
-			<center>
-				<a href="./resources/images/style_trans1.png"><img class="rounded" src = "./resources/images/style_trans1.png" height="500px"></img></href></a><br>
-			</center>
-			
-			<td width=400px>
-				<center>
-					<span style="font-size:14px"><i>Qualitative results our model on tactile-driven image stylization. For each row, we show an input
-						image (left) and the manipulated image (to its right) obtained by stylizing with a given tactile input (right side).</i>
-			  </center>
-			  </td>
+			Hover over pictures in the first row to see how the others change!
+			<br><br>
 
-			<br><br><br>  
+			<table align=center style="width:100%">
+			  <tr class="spaceUnder">
+				  <td style="font-size:20px">Stone</td>
+				  <td><a href="./resources/images/stone_eg.png"><img id="stone" class="rounded" src = "./resources/images/stone_eg.png" height="120px"></img></href></a></td>
+				  <td>
+						  <img id="stone_img1" src='./resources/images/to_stone/1.png'  height="100px"/>
+						  <img id="stone_img2" src='./resources/images/to_stone/2.png'  height="100px"/>
+						  <img id="stone_img3" src='./resources/images/to_stone/3.png'  height="100px"/>
+						  <img id="stone_img4" src='./resources/images/to_stone/4.png'  height="100px"/>
+						  <img id="stone_img5" src='./resources/images/to_stone/5.png'  height="100px"/>
+				  </td>
+			  </tr>
+  
+			  
+			  <!-- <tr class="spaceUnder">
+				  <td style="font-size:20px">Brick</td>
+				  <td>
+					  <a href="./resources/images/brick_eg.png"><img id="brick" class="rounded" src = "./resources/images/brick_eg.png" height="120px"></img></href></a>
+				  </td>
+				  <td>
+						  <img id="brick_img1" src='./resources/images/to_brick/1.png' height=100px/>
+						  <img id="brick_img2" src='./resources/images/to_brick/2.png' height=100px />
+						  <img id="brick_img3" src='./resources/images/to_brick/3.png' height=100px/>
+						  <img id="brick_img4" src='./resources/images/to_brick/4.png' height=100px/>
+						  <img id="brick_img5" src='./resources/images/to_brick/5.png' height=100px/>
+				  </td>
+			  </tr> -->
+  
+			  <tr class="spaceUnder">
+				  <td style="font-size:20px">Concrete</td>
+				  <td>
+					  <a href="./resources/images/concrete_eg.png"><img id="concrete" class="rounded" src = "./resources/images/concrete_eg.png" height="120px"></img></href></a>
+				  </td>
+				  <td>
+						  <img id="concrete_img3" src='./resources/images/to_concrete/3.png' height=100px/>
+						  <img id="concrete_img4" src='./resources/images/to_concrete/4.png' height=100px/>
+						  <img id="concrete_img5" src='./resources/images/to_concrete/5.png' height=100px/>
+						  <img id="concrete_img1" src='./resources/images/to_concrete/1.png' height=100px/>
+						  <img id="concrete_img2" src='./resources/images/to_concrete/2.png' height=100px />
+				  </td>
+			  </tr>
+  
+			  <tr class="spaceUnder">
+				  <td style="font-size:20px">Fabric</td>
+				  <td>
+					  <a href="./resources/images/fabric_eg.png"><img id="fabric" class="rounded" src = "./resources/images/fabric_eg.png" height="120px"></img></href></a>
+				  </td>
+				  <td>
+						  <img id="fabric_img1" src='./resources/images/to_fabric/1.png' height=100px/>
+						  <img id="fabric_img2" src='./resources/images/to_fabric/2.png' height=100px />
+						  <img id="fabric_img3" src='./resources/images/to_fabric/3.png' height=100px/>
+						  <img id="fabric_img4" src='./resources/images/to_fabric/4.png' height=100px/>
+						  <img id="fabric_img5" src='./resources/images/to_fabric/5.png' height=100px/>
+				  </td>
+			  </tr>
+  
+			  <tr class="spaceUnder">
+				  <td style="font-size:20px">Grass</td>
+				  <td>
+					  <a href="./resources/images/grass_eg.png"><img id="grass" class="rounded" src = "./resources/images/grass_eg.png" height="120px"></img></href></a>
+				  </td>
+				  <td>
+						  <img id="grass_img1" src='./resources/images/to_grass/1.png' height=100px/>
+						  <img id="grass_img2" src='./resources/images/to_grass/2.png' height=100px />
+						  <img id="grass_img3" src='./resources/images/to_grass/3.png' height=100px/>
+						  <img id="grass_img4" src='./resources/images/to_grass/4.png' height=100px/>
+						  <img id="grass_img5" src='./resources/images/to_grass/5.png' height=100px/>
+				  </td>
+			  </tr>
+  
+			  <!-- <tr class="spaceUnder">
+				  <td style="font-size:20px">Plants</td>
+				  <td>
+					  <a href="./resources/images/plant_eg.png"><img id="plants" class="rounded" src = "./resources/images/plant_eg.png" height="120px"></img></href></a>
+				  </td>
+				  <td>
+						  <img id="plants_img1" src='./resources/images/to_plants/1.png' height=100px/>
+						  <img id="plants_img2" src='./resources/images/to_plants/2.png' height=100px />
+						  <img id="plants_img3" src='./resources/images/to_plants/3.png' height=100px/>
+						  <img id="plants_img4" src='./resources/images/to_plants/4.png' height=100px/>
+						  <img id="plants_img5" src='./resources/images/to_plants/5.png' height=100px/>
+				  </td>
+			  </tr> -->
+  
+			  <!-- <tr class="spaceUnder">
+				  <td style="font-size:20px">Tree</td>
+				  <td>
+					  <a href="./resources/images/tree_eg.png"><img id="tree" class="rounded" src = "./resources/images/tree_eg.png" height="120px"></img></href></a>
+				  </td>
+				  <td>
+						  <img id="tree_img1" src='./resources/images/to_tree/1.png' height=100px/>
+						  <img id="tree_img2" src='./resources/images/to_tree/2.png' height=100px />
+						  <img id="tree_img3" src='./resources/images/to_tree/3.png' height=100px/>
+						  <img id="tree_img4" src='./resources/images/to_tree/4.png' height=100px/>
+						  <img id="tree_img5" src='./resources/images/to_tree/5.png' height=100px/>
+				  </td>
+			  </tr> -->
+  
+			</table>
+  
+  
+		  <script>
+			  const stone = document.getElementById("stone");
+			  stone.addEventListener("mouseover", stoneOver);
+			  stone.addEventListener("mouseleave", stoneLeave)
+			  
+			  function stoneOver() {
+				document.getElementById("stone_img1").src='./resources/images/to_stone/1s.png';
+				document.getElementById("stone_img2").src='./resources/images/to_stone/2s.png';
+				document.getElementById("stone_img3").src='./resources/images/to_stone/3s.png';
+				document.getElementById("stone_img4").src='./resources/images/to_stone/4s.png';
+				document.getElementById("stone_img5").src='./resources/images/to_stone/5s.png';
+			  }
+  
+			  function stoneLeave() {
+				  document.getElementById("stone_img1").src='./resources/images/to_stone/1.png' ;
+				  document.getElementById("stone_img2").src='./resources/images/to_stone/2.png' ;
+				  document.getElementById("stone_img3").src='./resources/images/to_stone/3.png' ;
+				  document.getElementById("stone_img4").src='./resources/images/to_stone/4.png' ;
+				  document.getElementById("stone_img5").src='./resources/images/to_stone/5.png' ;
+			  }
+		  </script>
+  
+		  <script>
+			  const brick = document.getElementById("brick");
+			  brick.addEventListener("mouseover", brickOver);
+			  brick.addEventListener("mouseleave", brickLeave)
+			  
+			  function brickOver() {
+				document.getElementById("brick_img1").src='./resources/images/to_brick/1s.png';
+				document.getElementById("brick_img2").src='./resources/images/to_brick/2s.png';
+				document.getElementById("brick_img3").src='./resources/images/to_brick/3s.png';
+				document.getElementById("brick_img4").src='./resources/images/to_brick/4s.png';
+				document.getElementById("brick_img5").src='./resources/images/to_brick/5s.png';
+			  }
+  
+			  function brickLeave() {
+				  document.getElementById("brick_img1").src='./resources/images/to_brick/1.png' ;
+				  document.getElementById("brick_img2").src='./resources/images/to_brick/2.png' ;
+				  document.getElementById("brick_img3").src='./resources/images/to_brick/3.png' ;
+				  document.getElementById("brick_img4").src='./resources/images/to_brick/4.png' ;
+				  document.getElementById("brick_img5").src='./resources/images/to_brick/5.png' ;
+			  }
+		  </script>
+  
+		  <script>
+			  const concrete = document.getElementById("concrete");
+			  concrete.addEventListener("mouseover", concreteOver);
+			  concrete.addEventListener("mouseleave", concreteLeave)
+			  
+			  function concreteOver() {
+				document.getElementById("concrete_img1").src='./resources/images/to_concrete/1s.png';
+				document.getElementById("concrete_img2").src='./resources/images/to_concrete/2s.png';
+				document.getElementById("concrete_img3").src='./resources/images/to_concrete/3s.png';
+				document.getElementById("concrete_img4").src='./resources/images/to_concrete/4s.png';
+				document.getElementById("concrete_img5").src='./resources/images/to_concrete/5s.png';
+			  }
+  
+			  function concreteLeave() {
+				  document.getElementById("concrete_img1").src='./resources/images/to_concrete/1.png' ;
+				  document.getElementById("concrete_img2").src='./resources/images/to_concrete/2.png' ;
+				  document.getElementById("concrete_img3").src='./resources/images/to_concrete/3.png' ;
+				  document.getElementById("concrete_img4").src='./resources/images/to_concrete/4.png' ;
+				  document.getElementById("concrete_img5").src='./resources/images/to_concrete/5.png' ;
+			  }
+		  </script>
+  
+		  <script>
+			  const fabric = document.getElementById("fabric");
+			  fabric.addEventListener("mouseover", fabricOver);
+			  fabric.addEventListener("mouseleave", fabricLeave)
+			  
+			  function fabricOver() {
+				document.getElementById("fabric_img1").src='./resources/images/to_fabric/1s.png';
+				document.getElementById("fabric_img2").src='./resources/images/to_fabric/2s.png';
+				document.getElementById("fabric_img3").src='./resources/images/to_fabric/3s.png';
+				document.getElementById("fabric_img4").src='./resources/images/to_fabric/4s.png';
+				document.getElementById("fabric_img5").src='./resources/images/to_fabric/5s.png';
+			  }
+  
+			  function fabricLeave() {
+				  document.getElementById("fabric_img1").src='./resources/images/to_fabric/1.png' ;
+				  document.getElementById("fabric_img2").src='./resources/images/to_fabric/2.png' ;
+				  document.getElementById("fabric_img3").src='./resources/images/to_fabric/3.png' ;
+				  document.getElementById("fabric_img4").src='./resources/images/to_fabric/4.png' ;
+				  document.getElementById("fabric_img5").src='./resources/images/to_fabric/5.png' ;
+			  }
+		  </script>
+  
+		  <script>
+			  const grass = document.getElementById("grass");
+			  grass.addEventListener("mouseover", grassOver);
+			  grass.addEventListener("mouseleave", grassLeave)
+			  
+			  function grassOver() {
+				document.getElementById("grass_img1").src='./resources/images/to_grass/1s.png';
+				document.getElementById("grass_img2").src='./resources/images/to_grass/2s.png';
+				document.getElementById("grass_img3").src='./resources/images/to_grass/3s.png';
+				document.getElementById("grass_img4").src='./resources/images/to_grass/4s.png';
+				document.getElementById("grass_img5").src='./resources/images/to_grass/5s.png';
+			  }
+  
+			  function grassLeave() {
+				  document.getElementById("grass_img1").src='./resources/images/to_grass/1.png' ;
+				  document.getElementById("grass_img2").src='./resources/images/to_grass/2.png' ;
+				  document.getElementById("grass_img3").src='./resources/images/to_grass/3.png' ;
+				  document.getElementById("grass_img4").src='./resources/images/to_grass/4.png' ;
+				  document.getElementById("grass_img5").src='./resources/images/to_grass/5.png' ;
+			  }
+		  </script>
+  
+		  <script>
+			  const plants = document.getElementById("plants");
+			  plants.addEventListener("mouseover", plantsOver);
+			  plants.addEventListener("mouseleave", plantsLeave)
+			  
+			  function plantsOver() {
+				document.getElementById("plants_img1").src='./resources/images/to_plants/1s.png';
+				document.getElementById("plants_img2").src='./resources/images/to_plants/2s.png';
+				document.getElementById("plants_img3").src='./resources/images/to_plants/3s.png';
+				document.getElementById("plants_img4").src='./resources/images/to_plants/4s.png';
+				document.getElementById("plants_img5").src='./resources/images/to_plants/5s.png';
+			  }
+  
+			  function plantsLeave() {
+				  document.getElementById("plants_img1").src='./resources/images/to_plants/1.png' ;
+				  document.getElementById("plants_img2").src='./resources/images/to_plants/2.png' ;
+				  document.getElementById("plants_img3").src='./resources/images/to_plants/3.png' ;
+				  document.getElementById("plants_img4").src='./resources/images/to_plants/4.png' ;
+				  document.getElementById("plants_img5").src='./resources/images/to_plants/5.png' ;
+			  }
+		  </script>
+  
+		  <script>
+			  const tree = document.getElementById("tree");
+			  tree.addEventListener("mouseover", treeOver);
+			  tree.addEventListener("mouseleave", treeLeave)
+			  
+			  function treeOver() {
+				document.getElementById("tree_img1").src='./resources/images/to_tree/1s.png';
+				document.getElementById("tree_img2").src='./resources/images/to_tree/2s.png';
+				document.getElementById("tree_img3").src='./resources/images/to_tree/3s.png';
+				document.getElementById("tree_img4").src='./resources/images/to_tree/4s.png';
+				document.getElementById("tree_img5").src='./resources/images/to_tree/5s.png';
+			  }
+  
+			  function treeLeave() {
+				  document.getElementById("tree_img1").src='./resources/images/to_tree/1.png' ;
+				  document.getElementById("tree_img2").src='./resources/images/to_tree/2.png' ;
+				  document.getElementById("tree_img3").src='./resources/images/to_tree/3.png' ;
+				  document.getElementById("tree_img4").src='./resources/images/to_tree/4.png' ;
+				  document.getElementById("tree_img5").src='./resources/images/to_tree/5.png' ;
+			  }
+		  </script>
+
 			<center><h3>Multimodal video prediction</h3></center>
 			We use our dataset to ask whether visual data can improve our estimates of future tactile signals: i.e., what will this object
 			feel like in a moment?<br>
@@ -821,24 +727,21 @@
 			longer time horizon, suggesting that visual information may be more helpful in this case.
 			<br><br>
 			<center>
-				<a href="./resources/images/video_pred1.png"><img class="rounded" src = "./resources/images/video_pred1.png" height="400px" width="1000px"></img></href></a><br>
+				<a href="./resources/images/video_pred1.png"><img class="rounded" src = "./resources/images/video_pred1.png" height="360px" width="900px"></img></href></a><br>
 			</center>
 		
-		<br><br>
-		<hr>
-		<br><br>
+	</div>
 		
-		<center><h1>Comparison to Other Datasets</h1></center>
-		To help understand the differences between our dataset and those of previous work: Object Folder 2.0, which contains virtual objects, and two robotic datasets: 
-		Feeling of Success, and VisGel.
-		We show examples from indoor scenes, since the other datasets do not contain outdoor scenes, and with rigid materials (since the virtual scenes do not contain deformable materials). Each row illustrates objects which are composed of similar materials, along with their corresponding GelSight images.
-		<br><br>
+	<div class="content" id="comparison">
+			<center><h1>Comparison to Other Datasets</h1></center>
+			To help understand the differences between our dataset and those of previous work: Object Folder 2.0, which contains virtual objects, and two robotic datasets: 
+			Feeling of Success, and VisGel.
+			We show examples from indoor scenes, since the other datasets do not contain outdoor scenes, and with rigid materials (since the virtual scenes do not contain deformable materials). Each row illustrates objects which are composed of similar materials, along with their corresponding GelSight images.
+		
 		
 		<center>
-			<a href="./resources/images/dataset_comparison.png"><img class="rounded" src = "./resources/images/dataset_comparison.png" height="400px" width="1000px"></img></href></a><br>
+			<a href="./resources/images/dataset_comparison.png"><img class="rounded" src = "./resources/images/dataset_comparison.png" height="360px" width="900px"></img></href></a><br>
 		</center>
-		
-			
 		<td width=400px>
 			<center>
 				<span style="font-size:14px"><i>We provide qualitative examples of 
@@ -846,420 +749,18 @@
 					from similar material taken from our dataset (right).</i>
 		  </center>
 		</td>
-
-		<br><br>
-		<hr>
-		<br><br>
+	</div>
+		
+			
+	<div class="content" id="acknowledgements">
 		<center><h1>Acknowledgements</h1></center>
 		We thank Xiaofeng Guo and Yufan Zhang for the extensive help with the GelSight sensor, and thank Daniel Geng, Yuexi Du and Zhaoying Pan for the helpful discussions. This work was supported in part by Cisco Systems.
 		The webpage template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for <a href="http://richzhang.github.io/colorization/">Colorization</a> project.
-		
-		<br><br><br>
+	</div>
 		<hr>
 		<br><br><br>
 		<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms" href="http://purl.org/dc/dcmitype/MovingImage" property="dct:title" rel="dct:type">Touch and Go: Learning from Human-Collected Vision and Touch</span> by <span xmlns:cc=“http://creativecommons.org/ns#” property=“cc:attributionName”>Fengyu Yang, Chenyang Ma, Jiacheng Zhang, Jing Zhu, Wenzhen Yuan, Andrew Owens</span> is licensed under a <a rel=“license” href=“http://creativecommons.org/licenses/by/4.0/”>Creative Commons Attribution 4.0 International License</a>
-  		  <!-- along with miscellaneous photos. -->
-  		  <!-- <br>
-  		  <table align=center width=1100px>
-  			  <tr>
-  	              <td width=300px>
-  					<center>
-  						<span style="font-size:22px"><a href='./resources/images/exs_sel_aa.jpg'>Ansel Adams</a></span><br>
-  	                	<a href="./resources/images/exs_sel_aa.jpg"><img onmouseover="this.src='./resources/images/exs_sel_aa_thumb_clr.jpg';" onmouseout="this.src='./resources/images/exs_sel_aa_thumb_bw.jpg';" src = "./resources/images/exs_sel_aa_thumb_bw.jpg" height = "250px"></a><br>
-  					<span style="font-size:14px">(hover for our results; click for full images)</span><br>
-  					<span style="font-size:14px">extention of Figure 15 from our paper</span></center>
-  	              </td>
-                  <td width=300px>
-  					<center>
-  						<span style="font-size:22px"><a href='./resources/images/exs_sel_hcb.jpg'>Henri Cartier-Bresson</a></span><br>
-                  		<a href="./resources/images/exs_sel_hcb.jpg"><img onmouseover="this.src='./resources/images/exs_sel_hcb_thumb_clr.jpg';" onmouseout="this.src='./resources/images/exs_sel_hcb_thumb_bw.jpg';" src = "./resources/images/exs_sel_hcb_thumb_bw.jpg" height = "250px"></a><br>
-						<span style="font-size:14px">(hover for our results; click for full images)</span><br>
-	  					<span style="font-size:14px">Figure 16 from our paper</span></center>
-  					</center>
-                  </td>
-                  <td width=250px>
-  					<center>
-  						<span style="font-size:22px"><a href='./resources/misc_examples.html'>Miscellaneous Photos</a></span><br>
-                  		<a href="./resources/misc_examples.html"><img onmouseover="this.src='./resources/images/exs_sel_misc_clr.jpg';" onmouseout="this.src='./resources/images/exs_sel_misc_bw.jpg';" src = "./resources/images/exs_sel_misc_bw.jpg" height = "250px"></a><br>
-						<span style="font-size:14px">(hover for our results; click for full images)</span><br>
-	  					<span style="font-size:14px">Figure 17 from our paper</span></center>
-  					</center>
-                  </td>
-
-                </tr>
-  		  </table>
-
-  		<br><br>  
-  	  	<hr>
-
-  		  <a name="perform_comp"></a>
-  		  <center><h1>Performance comparisons</h1></center>
-  		  Click the montage to the left to see our results on Imagenet validation photos (this is an extension of Figure 6 from our [v1] paper). Click the montage to the right to see results on a test set sampled from SUN (extension of Figure 12 in our [v1] paper). These images are random samples from the test set and are <i>not</i> hand-selected.<br>
-  		  <br>
-  		  <table align=center width=1000px>
-  			  <tr>
-  	              <td width=400px>
-  					<center>
-  						<span style="font-size:22px"><a href='./resources/imagenet_comparison.html'>Comparisons on Imagenet</a></span><br>
-  	                	<a href="./resources/imagenet_comparison.html"><img class="rounded" onmouseover="this.src='./resources/images/imagenet_montage_ours.jpg';" onmouseout="this.src='./resources/images/imagenet_montage_lum.jpg';" src = "./resources/images/imagenet_montage_lum.jpg" height = "400px"></a><br>
-  					<span style="font-size:16px">(hovering shows our results; click for additional examples)</span>
-					</center>
-  	              </td>
-                  <td width=400px>
-  					<center>
-  						<span style="font-size:22px"><a href='./resources/learch_comparison.html'>Comparisons on SUN</a></span><br>
-                  		<a href="./resources/learch_comparison.html"><img class="rounded" onmouseover="this.src='./resources/images/learch_montage_ours.jpg';" onmouseout="this.src='./resources/images/learch_montage_lum.jpg';" src = "./resources/images/learch_montage_lum.jpg" height = "400px"></a><br>
-						<span style="font-size:16px">(hovering shows our results; click for additional examples)</span>
-  					</center>
-                  </td>
-                </tr>
-  		  </table>
-		<br><br>	
-		We also provide an initial comparison against Cheng et al. 2015 <a href="./resources/deep_colorization_comparison.html">here</a>. We were unable to acquire code or results from the authors, so we simply ran our method on screenshots from the figures in the paper of Cheng et al. See Section 3 in the <a href="./resources/supp.pdf">supplementary pdf</a> for further discussion of the differences between our algorithm and that of Cheng et al.
-  		<br><br>  
-  	  	<hr>
-			  
-		<a name="vgg_res"></a>
-  	  	<center><h1>Semantic interpretability of results <br> -->
-  	  		<!-- Categories for which colorization most helps/hurts recognition -->
-  	  	<!-- </h1></center>
-		Here, we show the ImageNet categories for which our colorization helps and hurts the most on object classification. Categories are ranked according to the difference in performance of VGG classification on the colorized result compared to on the grayscale version. This is an extension of Figure 6 in the [v1] paper.<br><br>
-			<center>Click a category below to see our results on all test images in that category.</center><br>
-    		  <table align=center width=1100px>
-    			  <tr>
-					  <td colspan="2"><center><b>Top</b></center></td>
-					  <td></td>
-					  <td colspan="2"><center><b>Bottom</b></center></td>
-				  </tr>
-    	              <td width=200px>
-  					  <ol>
-  						  <li><a href="./resources/top_0_index.html">Rapeseed<br><img class="rounded" height=50px src="./resources/images/VGG_tests/top_0_rapeseed_teaser.jpg"/></a></li>
-  						  <li><a href="./resources/top_1_index.html">Lorikeet<br><img class="rounded" height=50px src="./resources/images/VGG_tests/top_1_lorikeet_teaser.jpg"/></a></li>
-  						  <li><a href="./resources/top_2_index.html">Cheeseburger<br><img class="rounded" height=50px src="./resources/images/VGG_tests/top_2_cheeseburger_teaser.jpg"/></a></li>
-  						  <li><a href="./resources/top_3_index.html">Meat Loaf<br><img class="rounded" height=50px src="./resources/images/VGG_tests/top_3_meat_teaser.jpg"/></a></li>
-  						  <li><a href="./resources/top_4_index.html">Pomegranate<br><img class="rounded" height=50px src="./resources/images/VGG_tests/top_4_pomegranate_teaser.jpg"/></a></li>
-					  </ol>
-				  </td>
-				  <td width=200px>
-					  <ol start="6">
-  						  <li><a href="./resources/top_5_index.html">Green Snake<br><img class="rounded" height=50px src="./resources/images/VGG_tests/top_5_green_teaser.jpg"/></a></li>
-  						  <li><a href="./resources/top_6_index.html">Pizza<br><img class="rounded" height=50px src="./resources/images/VGG_tests/top_6_pizza_teaser.jpg"/></a></li>
-  						  <li><a href="./resources/top_7_index.html">Yellow Lady's Slipper<br><img class="rounded" height=50px src="./resources/images/VGG_tests/top_7_yellow_teaser.jpg"/></a></li>
-  						  <li><a href="./resources/top_8_index.html">Orange<br><img class="rounded" height=50px src="./resources/images/VGG_tests/top_8_orange_teaser.jpg"/></a></li>
-  						  <li><a href="./resources/top_9_index.html">Goldfinch<br><img class="rounded" height=50px src="./resources/images/VGG_tests/top_9_goldfinch_teaser.jpg"/></a></li>
-  					  </ol>
-				  <td width=100px></td>
-  				  </td>
-    	              <td width=200px>
-  					  <ol start=991>
-  						  <li><a href="./resources/bot_9_index.html">Chain<br><img class="rounded" height=50px src="./resources/images/VGG_tests/bot_9_chain_teaser.jpg"/></a></li>
-  						  <li><a href="./resources/bot_8_index.html">Wok<br><img class="rounded" height=50px src="./resources/images/VGG_tests/bot_8_wok_teaser.jpg"/></a></li>
-  						  <li><a href="./resources/bot_7_index.html">Can opener<br><img class="rounded" height=50px src="./resources/images/VGG_tests/bot_7_can_teaser.jpg"/></a></li>
-  						  <li><a href="./resources/bot_6_index.html">Water bottle<br><img class="rounded" height=50px src="./resources/images/VGG_tests/bot_6_water_teaser.jpg"/></a></li>
-						  <li><a href="./resources/bot_5_index.html">Modem<br><img class="rounded" height=50px src="./resources/images/VGG_tests/bot_5_modem_teaser.jpg"/></a></li>
-					  </ol>
-				  </td>
-				  <td width=200px>
-					  <ol start=996>
-						  <li><a href="./resources/bot_4_index.html">Standard Schnauzer<br><img class="rounded" height=50px src="./resources/images/VGG_tests/bot_4_standard_teaser.jpg"/></a></li>
-						  <li><a href="./resources/bot_3_index.html">Pickelhaube<br><img class="rounded" height=50px src="./resources/images/VGG_tests/bot_3_pickelhaube_teaser.jpg"/></a></li>
-						  <li><a href="./resources/bot_2_index.html">Half Track<br><img class="rounded" height=50px src="./resources/images/VGG_tests/bot_2_half_teaser.jpg"/></a></li>
-						  <li><a href="./resources/bot_1_index.html">Barbershop<br><img class="rounded" height=50px src="./resources/images/VGG_tests/bot_1_barbershop_teaser.jpg"/></a></li>
-						  <li><a href="./resources/bot_0_index.html">Military Uniform<br><img class="rounded" height=50px src="./resources/images/VGG_tests/bot_0_military_teaser.jpg"/></a></li>
-  					  </ol>
-  				  </td>
-  			  </tr>
-  		   </table>	  
-				
-		  <br>
-		  <hr>
-
-  		<a name="deep_dream"></a>
-
-  	  	<center><h1>Deep Dream Visualization<br> -->
-  	  		<!-- Categories for which colorization most helps/hurts recognition -->
-  	  	<!-- </h1></center>
-  		Alexander Mordvintsev visualized the contents of our network by applying the <a href="https://research.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html">Deep Dream</a> algorithm to each filter in each layer of our [v1] network. He has kindly shared his results with us! The deep-dream images are grayscale and colorized with out network. We found that the <a href="http://storage.googleapis.com/deepdream/visualz/colorize/009_conv4_3.html">conv4_3</a> layer had the most interesting structures. Click on each layer below to see the results, and let us know what you see!
-
-  		<br><br> -->
-
-<!--   		<table align=center width=1100px>
-  			<tr>
-  	        <td width=400px>
-		  		<center><h1>Deep Dream Visualization</h1></center>
- -->
-	  		  <!-- <table align=center width=1000px>
-	  			  <tr>
-	  	              <td width=200px>
-	  					<center>
-	  						<a href="http://storage.googleapis.com/deepdream/visualz/colorize/001_conv1_2.html"><img class="rounded" onmouseover="this.src='./resources/images/deepdream_conv1_2.jpg';" onmouseout="this.src='./resources/images/deepdream_conv1_2.jpg;" src = "./resources/images/deepdream_conv1_2.jpg" height = "150px"></a><br>
-	  						<span style="font-size:14px"><a href='http://storage.googleapis.com/deepdream/visualz/colorize/001_conv1_2.html'>conv1_2</a></span><br>
-	  					<span style="font-size:16px"></span>
-						</center>
-	  	              </td>
-	  	              <td width=175px>
-	  					<center>
-	  						<a href="http://storage.googleapis.com/deepdream/visualz/colorize/002_conv2_1.html"><img class="rounded" onmouseover="this.src='./resources/images/deepdream_conv2_1.jpg';" onmouseout="this.src='./resources/images/deepdream_conv2_1.jpg;" src = "./resources/images/deepdream_conv2_1.jpg" height = "150px"></a><br>
-	  						<span style="font-size:14px"><a href='http://storage.googleapis.com/deepdream/visualz/colorize/002_conv2_1.html'>conv2_1</a></span><br>
-	  					<span style="font-size:16px"></span>
-						</center>
-					  </td>
-	  	              <td width=175px>
-	  					<center>
-	  						<a href="http://storage.googleapis.com/deepdream/visualz/colorize/003_conv2_2.html"><img class="rounded" onmouseover="this.src='./resources/images/deepdream_conv2_2.jpg';" onmouseout="this.src='./resources/images/deepdream_conv2_2.jpg;" src = "./resources/images/deepdream_conv2_2.jpg" height = "150px"></a><br>
-	  						<span style="font-size:14px"><a href='http://storage.googleapis.com/deepdream/visualz/colorize/003_conv2_2.html'>conv2_2</a></span><br>
-	  					<span style="font-size:16px"></span>
-						</center>
-					  </td>
-
-	  	              <td width=175px>
-	  					<center>
-	  						<a href="http://storage.googleapis.com/deepdream/visualz/colorize/004_conv3_1.html"><img class="rounded" onmouseover="this.src='./resources/images/deepdream_conv3_1.jpg';" onmouseout="this.src='./resources/images/deepdream_conv3_1.jpg;" src = "./resources/images/deepdream_conv3_1.jpg" height = "150px"></a><br>
-	  						<span style="font-size:14px"><a href='http://storage.googleapis.com/deepdream/visualz/colorize/004_conv3_1.html'>conv3_1</a></span><br>
-	  					<span style="font-size:16px"></span>
-						</center>
-					  </td>
-
-	  	              <td width=175px>
-	  					<center>
-	  						<a href="http://storage.googleapis.com/deepdream/visualz/colorize/005_conv3_2.html"><img class="rounded" onmouseover="this.src='./resources/images/deepdream_conv3_2.jpg';" onmouseout="this.src='./resources/images/deepdream_conv3_2.jpg;" src = "./resources/images/deepdream_conv3_2.jpg" height = "150px"></a><br>
-	  						<span style="font-size:14px"><a href='http://storage.googleapis.com/deepdream/visualz/colorize/005_conv3_2.html'>conv3_2</a></span><br>
-	  					<span style="font-size:16px"></span>
-						</center>
-					  </td>
-					  
-	  	              <td width=175px>
-	  					<center>
-	  						<a href="http://storage.googleapis.com/deepdream/visualz/colorize/006_conv3_3.html"><img class="rounded" onmouseover="this.src='./resources/images/deepdream_conv3_3.jpg';" onmouseout="this.src='./resources/images/deepdream_conv3_3.jpg;" src = "./resources/images/deepdream_conv3_3.jpg" height = "150px"></a><br>
-	  						<span style="font-size:14px"><a href='http://storage.googleapis.com/deepdream/visualz/colorize/006_conv3_3.html'>conv3_3</a></span><br>
-	  					<span style="font-size:16px"></span>
-						</center>
-					  </td>
-	                </tr>
-
-	  			  <tr>
-	  	              <td width=200px>
-	  					<center>
-	  						<a href="http://storage.googleapis.com/deepdream/visualz/colorize/007_conv4_1.html"><img class="rounded" onmouseover="this.src='./resources/images/deepdream_conv4_1.jpg';" onmouseout="this.src='./resources/images/deepdream_conv4_1.jpg;" src = "./resources/images/deepdream_conv4_1.jpg" height = "150px"></a><br>
-	  						<span style="font-size:14px"><a href='http://storage.googleapis.com/deepdream/visualz/colorize/007_conv4_1.html'>conv4_1</a></span><br>
-	  					<span style="font-size:16px"></span>
-						</center>
-	  	              </td>
-	  	              <td width=175px>
-	  					<center>
-	  						<a href="http://storage.googleapis.com/deepdream/visualz/colorize/008_conv4_2.html"><img class="rounded" onmouseover="this.src='./resources/images/deepdream_conv4_2.jpg';" onmouseout="this.src='./resources/images/deepdream_conv4_2.jpg;" src = "./resources/images/deepdream_conv4_2.jpg" height = "150px"></a><br>
-	  						<span style="font-size:14px"><a href='http://storage.googleapis.com/deepdream/visualz/colorize/008_conv4_2.html'>conv4_2</a></span><br>
-	  					<span style="font-size:16px"></span>
-						</center>
-					  </td>
-	  	              <td width=175px>
-	  					<center>
-	  						<a href="http://storage.googleapis.com/deepdream/visualz/colorize/009_conv4_3.html"><img class="rounded" onmouseover="this.src='./resources/images/deepdream_conv4_3.jpg';" onmouseout="this.src='./resources/images/deepdream_conv4_3.jpg;" src = "./resources/images/deepdream_conv4_3.jpg" height = "150px"></a><br>
-	  						<span style="font-size:18px"><a href='http://storage.googleapis.com/deepdream/visualz/colorize/009_conv4_3.html'>conv4_3</a></span><br>
-	  					<span style="font-size:16px"></span>
-						</center>
-					  </td>
-
-	  	              <td width=175px>
-	  					<center>
-	  						<a href="http://storage.googleapis.com/deepdream/visualz/colorize/010_conv5_1.html"><img class="rounded" onmouseover="this.src='./resources/images/deepdream_conv5_1.jpg';" onmouseout="this.src='./resources/images/deepdream_conv5_1.jpg;" src = "./resources/images/deepdream_conv5_1.jpg" height = "150px"></a><br>
-	  						<span style="font-size:14px"><a href='http://storage.googleapis.com/deepdream/visualz/colorize/010_conv5_1.html'>conv5_1</a></span><br>
-	  					<span style="font-size:16px"></span>
-						</center>
-					  </td>
-
-	  	              <td width=175px>
-	  					<center>
-	  						<a href="http://storage.googleapis.com/deepdream/visualz/colorize/011_conv5_2.html"><img class="rounded" onmouseover="this.src='./resources/images/deepdream_conv5_2.jpg';" onmouseout="this.src='./resources/images/deepdream_conv5_2.jpg;" src = "./resources/images/deepdream_conv5_2.jpg" height = "150px"></a><br>
-	  						<span style="font-size:14px"><a href='http://storage.googleapis.com/deepdream/visualz/colorize/011_conv5_2.html'>conv5_2</a></span><br>
-	  					<span style="font-size:16px"></span>
-						</center>
-					  </td>
-					  
-	  	              <td width=175px>
-	  					<center>
-	  						<a href="http://storage.googleapis.com/deepdream/visualz/colorize/012_conv5_3.html"><img class="rounded" onmouseover="this.src='./resources/images/deepdream_conv5_3.jpg';" onmouseout="this.src='./resources/images/deepdream_conv5_3.jpg;" src = "./resources/images/deepdream_conv5_3.jpg" height = "150px"></a><br>
-	  						<span style="font-size:14px"><a href='http://storage.googleapis.com/deepdream/visualz/colorize/012_conv5_3.html'>conv5_3</a></span><br>
-	  					<span style="font-size:16px"></span>
-						</center>
-					  </td>
-	                </tr>
-
-	  			  <tr>
-	  	              <td width=200px>
-	  					<center>
-	  						<a href="http://storage.googleapis.com/deepdream/visualz/colorize/013_conv6_1.html"><img class="rounded" onmouseover="this.src='./resources/images/deepdream_conv6_1.jpg';" onmouseout="this.src='./resources/images/deepdream_conv6_1.jpg;" src = "./resources/images/deepdream_conv6_1.jpg" height = "150px"></a><br>
-	  						<span style="font-size:14px"><a href='http://storage.googleapis.com/deepdream/visualz/colorize/013_conv6_1.html'>conv6_1</a></span><br>
-	  					<span style="font-size:16px"></span>
-						</center>
-	  	              </td>
-	  	              <td width=175px>
-	  					<center>
-	  						<a href="http://storage.googleapis.com/deepdream/visualz/colorize/014_conv6_2.html"><img class="rounded" onmouseover="this.src='./resources/images/deepdream_conv6_2.jpg';" onmouseout="this.src='./resources/images/deepdream_conv6_2.jpg;" src = "./resources/images/deepdream_conv6_2.jpg" height = "150px"></a><br>
-	  						<span style="font-size:14px"><a href='http://storage.googleapis.com/deepdream/visualz/colorize/014_conv6_2.html'>conv6_2</a></span><br>
-	  					<span style="font-size:16px"></span>
-						</center>
-					  </td>
-	  	              <td width=175px>
-	  					<center>
-	  						<a href="http://storage.googleapis.com/deepdream/visualz/colorize/015_conv6_3.html"><img class="rounded" onmouseover="this.src='./resources/images/deepdream_conv6_3.jpg';" onmouseout="this.src='./resources/images/deepdream_conv6_3.jpg;" src = "./resources/images/deepdream_conv6_3.jpg" height = "150px"></a><br>
-	  						<span style="font-size:14px"><a href='http://storage.googleapis.com/deepdream/visualz/colorize/015_conv6_3.html'>conv6_3</a></span><br>
-	  					<span style="font-size:16px"></span>
-						</center>
-					  </td>
-
-	  	              <td width=175px>
-	  					<center>
-	  						<a href="http://storage.googleapis.com/deepdream/visualz/colorize/016_conv7_1.html"><img class="rounded" onmouseover="this.src='./resources/images/deepdream_conv7_1.jpg';" onmouseout="this.src='./resources/images/deepdream_conv7_1.jpg;" src = "./resources/images/deepdream_conv7_1.jpg" height = "150px"></a><br>
-	  						<span style="font-size:14px"><a href='http://storage.googleapis.com/deepdream/visualz/colorize/016_conv7_1.html'>conv7_1</a></span><br>
-	  					<span style="font-size:16px"></span>
-						</center>
-					  </td>
-
-	  	              <td width=175px>
-	  					<center>
-	  						<a href="http://storage.googleapis.com/deepdream/visualz/colorize/017_conv7_2.html"><img class="rounded" onmouseover="this.src='./resources/images/deepdream_conv7_2.jpg';" onmouseout="this.src='./resources/images/deepdream_conv7_2.jpg;" src = "./resources/images/deepdream_conv7_2.jpg" height = "150px"></a><br>
-	  						<span style="font-size:14px"><a href='http://storage.googleapis.com/deepdream/visualz/colorize/017_conv7_2.html'>conv7_2</a></span><br>
-	  					<span style="font-size:16px"></span>
-						</center>
-					  </td>
-					  
-	  	              <td width=175px>
-	  					<center>
-	  						<a href="http://storage.googleapis.com/deepdream/visualz/colorize/018_conv7_3.html"><img class="rounded" onmouseover="this.src='./resources/images/deepdream_conv7_3.jpg';" onmouseout="this.src='./resources/images/deepdream_conv7_3.jpg;" src = "./resources/images/deepdream_conv7_3.jpg" height = "150px"></a><br>
-	  						<span style="font-size:14px"><a href='http://storage.googleapis.com/deepdream/visualz/colorize/018_conv7_3.html'>conv7_3</a></span><br>
-	  					<span style="font-size:16px"></span>
-						</center>
-					  </td>
-	                </tr>
-
-	  		  </table>
-
- 			</td>
-			</tr>
-		</table>
-
-		<br>
-		<hr>
-		<br>
-
-			  <a name="related_work"></a>
-			  <table align=center width=1100px>
-				  <tr>
-		              <td width=800px>
-						<left>
-
-	  		  <center><h1>User-Generated Examples</h1></center>
-
-	  		  We have received many interesting examples and applications, developed by users! Note that the video examples are run on a <i>per-frame</i> basis, with no temporal consistency enforced. If you have any examples you'd like to share, please email Richard Zhang at <em>rich.zhang at eecs.berkeley.edu</em>.
-
-	  		  <br><br> -->
-	  		  <!-- <br> -->
-
-		  		<!-- <span style="font-size:24px"><center><b> Videos </b> </center></span> -->
-
-		  		<!-- <center>Lukas Graham - 7 years <a href="http://www.dailymotion.com/video/k4PEXizTVwRXSoiOYvH">[Music Video]</a></center> -->
-
-				<!-- <span style="font-size:20px"><center>Lukas Graham - 7 years <a href="http://www.dailymotion.com/video/k1NRoJ1l9v3kIeiOYvH">[Music Video]</a></center></span> -->
-
-				<!-- <center>Impact (1949) <a href="http://whattogive.com/videoColourization/">[Clip]</a> <a href="http://sskwirrel.blogspot.com/2016/04/using-neural-networks-to-colour-archive.html">[Blog Post]</a></center>
-
-				<center>Dorothy Dandrige - Zoot Suit (1942) <a href="https://www.youtube.com/watch?v=tjWbLRoJ3tY">[Clip]</a></center>
-
-				<center>Seven Samurai (1954) <a href="https://www.youtube.com/watch?v=VeEAGipZQiY">[Clip]</a></center>
-
-				<br>
-
-		  		<span style="font-size:24px"><center><b> Applications </b> </center></span>
-
-				<center>Automatic colorizer Bot <a href="https://www.reddit.com/user/pm_me_your_bw_pics?sort=new">[Reddit]</a> <a href="http://imgur.com/a/ynSXr">[Gallery]</a> <a href="http://www.whatimade.today/our-frst-reddit-bot-coloring-b-2/">[Blog Post]</a> <a href="http://whatimade.today/two-weeks-of-colorizebot-conclusions-and-statistics/">[2 Week Update]</a></center>
-
-				<center>Reddit thread from /r/InternetIsBeautiful <a href="https://www.reddit.com/r/InternetIsBeautiful/comments/4t8cuk/use_deep_learning_algorithms_to_add_color_to/">[Link]</a> <a href="http://demos.algorithmia.com/colorize-photos/">[Demo]</a> <a href="http://blog.algorithmia.com/2016/07/17-best-images-reddit-colorized/">[Blog Post]</a></center> -->
-
-				<!-- <center>Colorizing an 1880 Glass Plate <a href="https://www.youtube.com/watch?v=gUGDhEd1c7I">[Video by Mathieu Stern]</a>  -->
-					<!-- <a href="http://petapixel.com/2016/08/03/colorizing-1880-glass-plate-neutral-network-photoshop/">[Petapixel Article]</a> </center> -->
-
-				<!-- <center>Colourful Past: Find and colorize historical photos <a href="http://www.colourfulpast.org/">[Link]</a></center> -->
-
-<!-- 	  		  		<br>
-					Ryan Dahl. <b>Automatic Colorization.</b> Jan 2016. <a href="http://tinyclouds.org/colorize/">[Website]</a><br>
- -->
-<!-- 					Aditya Deshpande, Jason Rock and David Forsyth. <b>Learning Large-Scale Automatic Image Colorization.</b> In <i>ICCV</i>, Dec 2015. <a href="http://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Deshpande_Learning_Large-Scale_Automatic_ICCV_2015_paper.pdf">[PDF]</a><a href="http://vision.cs.illinois.edu/projects/lscolor/">[Website]</a><br> -->
-
-<!-- 					Zezhou Cheng, Qingxiong Yang, and Bin Sheng. <b>Deep Colorization.</b> In <i>ICCV</i>, Dec 2015. <a href="http://www.cs.cityu.edu.hk/~qiyang/publications/iccv-15.pdf">[PDF]</a><br> -->
-					
-			   		<!-- </left>
-				</td>
-			 </tr>
-		 </table>
-
-
-		<br>
-		<hr>
-		<br>
-
-  		  <a name="related_work"></a>
-  		  <table align=center width=1100px>
-  			  <tr>
-  	              <td width=400px>
-  					<left>
-	  		  <center><h1>Recent Related Work</h1></center>
-
-	  		  There have been a number of works in the field of automatic image colorization in the last few months! We would like to direct you to these recent related works for comparison. For a more thorough discussion of related work, please see our <a href="http://arxiv.org/pdf/1603.08511.pdf">full paper</a>.
-
-	  		  <br><br> -->
-
-	  		  <!-- <br><br> -->
-
-	  		  		<!-- <span style="font-size:24px"><center><b> Concurrent Work </b> </center></span><br>
-
-					Gustav Larsson, Michael Maire, and Gregory Shakhnarovich. <b>Learning Representations for Automatic Colorization.</b> In <i>ECCV</i> 2016. <a href="http://arxiv.org/pdf/1603.06668.pdf">[PDF]</a><a href="http://people.cs.uchicago.edu/~larsson/colorization/">[Website]</a></br>
-
-					Satoshi Iizuka, Edgar Simo-Serra, and Hiroshi Ishikawa. <b>Let there be Color!: Joint End-to-end Learning of Global and Local Image Priors for Automatic Image Colorization with Simultaneous Classification.</b> In <i>SIGGRAPH</i>, 2016. <a href="http://hi.cs.waseda.ac.jp/~iizuka/projects/colorization/data/colorization_sig2016.pdf">[PDF]<a href="http://hi.cs.waseda.ac.jp/~iizuka/projects/colorization/">[Website]</a></a></br>
-
-					<br><br>
-
-	  		  		<span style="font-size:24px"><center><b> Previous Work </b> </center></span><br>
-					Ryan Dahl. <b>Automatic Colorization.</b> Jan 2016. <a href="http://tinyclouds.org/colorize/">[Website]</a><br>
-
-					Aditya Deshpande, Jason Rock and David Forsyth. <b>Learning Large-Scale Automatic Image Colorization.</b> In <i>ICCV</i>, Dec 2015. <a href="http://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Deshpande_Learning_Large-Scale_Automatic_ICCV_2015_paper.pdf">[PDF]</a><a href="http://vision.cs.illinois.edu/projects/lscolor/">[Website]</a><br>
 	
-					Zezhou Cheng, Qingxiong Yang, and Bin Sheng. <b>Deep Colorization.</b> In <i>ICCV</i>, Dec 2015. <a href="http://www.cs.cityu.edu.hk/~qiyang/publications/iccv-15.pdf">[PDF]</a><br>
-					
-			   		</left>
-				</td>
-			 </tr>
-		 </table>
-
-		  <br>
-		  <hr>
-		  <br>
-		  	
-  		  <table align=center width=1100px>
-  			  <tr>
-  	              <td width=400px>
-  					<left>
-	  		  <center><h1>Acknowledgements</h1></center>
-	  		  This research was supported, in part, by ONR MURI N000141010934, NSF SMA-1514512, an Intel research grant, and a Tesla K40 GPU hardware donation by NVIDIA Corp. We thank members of the Berkeley Vision Lab for helpful discussions, Philipp Kr&auml;henb&uuml;hl and Jeff Donahue for help with self-supervision experiments, and
-Aditya Deshpande and Gustav Larsson for providing help with comparisons to <a href="http://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Deshpande_Learning_Large-Scale_Automatic_ICCV_2015_paper.pdf">Deshpande et al.</a> and <a href="http://arxiv.org/pdf/1603.06668v1.pdf">Larsson et al</a>.
-
-			</left>
-		</td>
-			 </tr>
-		</table>
-
-		<br><br>
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-75863369-1', 'auto');
-  ga('send', 'pageview');
-
-</script> -->
               
 </body>
 </html>
