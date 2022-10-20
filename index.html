@@ -44,9 +44,16 @@
     vertical-align:top;
     }
 
+
 	tr.spaceUnder>td {
 		padding-bottom: 3em;
 	}
+
+	.paddingBetweenRows td
+	{
+		padding:0 15px;
+	}
+
 
 
 
@@ -315,7 +322,7 @@
 	  			  <tr>
 	  	              <td align=center width=150px>
 	  					<center>
-							<span style="font-size:20px"><a href='https://openreview.net/forum?id=ZZ3FeSSPPblo'> [Paper]</a></span>
+							<span style="font-size:20px"><a href='https://openreview.net/pdf?id=ZZ3FeSSPPblo'> [Paper]</a></span>
 							&nbsp&nbsp&nbsp&nbsp&nbsp
 	  						<span style="font-size:20px"><a href='https://drive.google.com/drive/folders/1NDasyshDCL9aaQzxjn_-Q5MBURRT360B'> [Dataset]</a></span>
 							  &nbsp&nbsp&nbsp&nbsp&nbsp
@@ -327,7 +334,7 @@
 		  <p><strong>Quick Jump:</strong></p>
 			<ol>
 				<li><a href="#overview">Overview</a></li>
-				<li><a href="#demonstration video">Demonstration Video</a></li>
+				<li><a href="#demonstration video">Examples from our Dataset</a></li>
 				<li><a href="#dataset">Dataset</a></li>
 				<li><a href="#applications">Applications</a></li>
 				<li><a href="#comparison">Comparison to Other Datasets</a></li>
@@ -343,16 +350,21 @@
 		We propose a dataset for multimodal visuo-tactile learning called Touch and Go, in which human data collectors probe objects in natural environments with tactile sensors, while recording egocentric video. 
 		<br>We successfully apply it to a variety of tasks: 1) self-supervised visuo-tactile feature learning, 2) the novel task of tactile-driven image stylization, i.e., making an object look as though it were ''felt like'' a given tactile input, and 3) predicting future frames of a tactile signal from visuo-tactile inputs.
 		
-		<center><h3>Human-Powered Collecting</h3></center>
+		<center><h3>Human-Powered Data Collection</h3></center>
 		<div class="row">
 
 			<div class="column">
 				<video controls class="html-video" width="512" height="201.6"><source src="./resources/video/comb_long1.mp4" type="video/mp4"></video>
 				<br><br>
-				<video controls class="html-video" width="512" height="201.6"><source src="./resources/video/comb_long2.mp4" type="video/mp4"></video>		
+				<video controls class="html-video" width="512" height="201.6"><source src="./resources/video/comb_long2.mp4" type="video/mp4"></video>
+				<br><br>
+				<span style="font-size:16px"><i>Untrimmed video examples from our dataset.</i>	
 			</div>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 			<div class="column">	
 				<img id="human_collect" src='./resources/images/human_collect2.jpg' width="300" height="400"/>
+				<br><br>
+				<span style="font-size:16px"><i>A photo of two data collectors collecting data in the wild while fully equipped.</i>
 			</div>
 		</div>
 
@@ -362,7 +374,7 @@
 		  
 
 	<div class="content" id="demonstration video">
-		<center><h1>Demonstration Video</h3></center>
+		<center><h1>Examples from our Dataset</h3></center>
 		<iframe width="920" height="483" src="https://www.youtube.com/embed/6kdPmmWrGz4"> </iframe>
 	</div>
 
@@ -460,263 +472,159 @@
 			images to match tactile inputs, such as by making surfaces rougher or smoother, or by creating
 			“hybrid” materials (e.g., adding grass to a surface).
 			<br><br>
-			Hover over pictures in the first row to see how the others change!
+			Hover over each row to see how the pictures change according to the first row!
 			<br><br>
 
-			<table align=center style="width:100%">
+			<table align=center style="width:100%" class='paddingBetweenRows'>
 			  <tr class="spaceUnder">
 				  <td style="font-size:20px">Stone</td>
-				  <td><a href="./resources/images/stone_eg.png"><img id="stone" class="rounded" src = "./resources/images/stone_eg.png" height="120px"></img></href></a></td>
+				  <td><a href="./resources/images/stone_eg.png"><img name="stone" class="rounded" src = "./resources/images/stone_eg.png" height="120px"></img></href></a></td>
+				  
 				  <td>
-						  <img id="stone_img1" src='./resources/images/to_stone/1.png'  height="100px"/>
-						  <img id="stone_img2" src='./resources/images/to_stone/2.png'  height="100px"/>
-						  <img id="stone_img3" src='./resources/images/to_stone/3.png'  height="100px"/>
-						  <img id="stone_img4" src='./resources/images/to_stone/4.png'  height="100px"/>
-						  <img id="stone_img5" src='./resources/images/to_stone/5.png'  height="100px"/>
+						  <img name="stone" id="stone_img1" src='./resources/images/to_stone/1.png'  height="100px"/>
+						  <img name="stone" id="stone_img2" src='./resources/images/to_stone/2.png'  height="100px"/>
+						  <img name="stone" id="stone_img3" src='./resources/images/to_stone/3.png'  height="100px"/>
+						  <img name="stone" id="stone_img4" src='./resources/images/to_stone/4.png'  height="100px"/>
+						  <!-- <img id="stone_img5" src='./resources/images/to_stone/5.png'  height="100px"/> -->
 				  </td>
 			  </tr>
-  
-			  
-			  <!-- <tr class="spaceUnder">
-				  <td style="font-size:20px">Brick</td>
-				  <td>
-					  <a href="./resources/images/brick_eg.png"><img id="brick" class="rounded" src = "./resources/images/brick_eg.png" height="120px"></img></href></a>
-				  </td>
-				  <td>
-						  <img id="brick_img1" src='./resources/images/to_brick/1.png' height=100px/>
-						  <img id="brick_img2" src='./resources/images/to_brick/2.png' height=100px />
-						  <img id="brick_img3" src='./resources/images/to_brick/3.png' height=100px/>
-						  <img id="brick_img4" src='./resources/images/to_brick/4.png' height=100px/>
-						  <img id="brick_img5" src='./resources/images/to_brick/5.png' height=100px/>
-				  </td>
-			  </tr> -->
   
 			  <tr class="spaceUnder">
 				  <td style="font-size:20px">Concrete</td>
 				  <td>
-					  <a href="./resources/images/concrete_eg.png"><img id="concrete" class="rounded" src = "./resources/images/concrete_eg.png" height="120px"></img></href></a>
+					  <a href="./resources/images/concrete_eg.png"><img name="concrete" id="concrete" class="rounded" src = "./resources/images/concrete_eg.png" height="120px"></img></href></a>
 				  </td>
 				  <td>
-						  <img id="concrete_img3" src='./resources/images/to_concrete/3.png' height=100px/>
-						  <img id="concrete_img4" src='./resources/images/to_concrete/4.png' height=100px/>
-						  <img id="concrete_img5" src='./resources/images/to_concrete/5.png' height=100px/>
-						  <img id="concrete_img1" src='./resources/images/to_concrete/1.png' height=100px/>
-						  <img id="concrete_img2" src='./resources/images/to_concrete/2.png' height=100px />
+						  <img name="concrete" id="concrete_img3" src='./resources/images/to_concrete/3.png' height=100px/>
+						  <img name="concrete" id="concrete_img4" src='./resources/images/to_concrete/4.png' height=100px/>
+						  <img name="concrete" id="concrete_img5" src='./resources/images/to_concrete/5.png' height=100px/>
+						  <img name="concrete" id="concrete_img1" src='./resources/images/to_concrete/1.png' height=100px/>
+						  <!-- <img id="concrete_img2" src='./resources/images/to_concrete/2.png' height=100px /> -->
 				  </td>
 			  </tr>
   
 			  <tr class="spaceUnder">
 				  <td style="font-size:20px">Fabric</td>
 				  <td>
-					  <a href="./resources/images/fabric_eg.png"><img id="fabric" class="rounded" src = "./resources/images/fabric_eg.png" height="120px"></img></href></a>
+					  <a href="./resources/images/fabric_eg.png"><img name="fabric" id="fabric" class="rounded" src = "./resources/images/fabric_eg.png" height="120px"></img></href></a>
 				  </td>
 				  <td>
-						  <img id="fabric_img1" src='./resources/images/to_fabric/1.png' height=100px/>
-						  <img id="fabric_img2" src='./resources/images/to_fabric/2.png' height=100px />
-						  <img id="fabric_img3" src='./resources/images/to_fabric/3.png' height=100px/>
-						  <img id="fabric_img4" src='./resources/images/to_fabric/4.png' height=100px/>
-						  <img id="fabric_img5" src='./resources/images/to_fabric/5.png' height=100px/>
+						  <img name="fabric" id="fabric_img1" src='./resources/images/to_fabric/1.png' height=100px/>
+						  <img name="fabric" id="fabric_img2" src='./resources/images/to_fabric/2.png' height=100px />
+						  <img name="fabric" id="fabric_img3" src='./resources/images/to_fabric/3.png' height=100px/>
+						  <img name="fabric" id="fabric_img4" src='./resources/images/to_fabric/4.png' height=100px/>
+						  <!-- <img id="fabric_img5" src='./resources/images/to_fabric/5.png' height=100px/> -->
 				  </td>
 			  </tr>
   
 			  <tr class="spaceUnder">
 				  <td style="font-size:20px">Grass</td>
 				  <td>
-					  <a href="./resources/images/grass_eg.png"><img id="grass" class="rounded" src = "./resources/images/grass_eg.png" height="120px"></img></href></a>
+					  <a href="./resources/images/grass_eg.png"><img name="grass" id="grass" class="rounded" src = "./resources/images/grass_eg.png" height="120px"></img></href></a>
 				  </td>
 				  <td>
-						  <img id="grass_img1" src='./resources/images/to_grass/1.png' height=100px/>
-						  <img id="grass_img2" src='./resources/images/to_grass/2.png' height=100px />
-						  <img id="grass_img3" src='./resources/images/to_grass/3.png' height=100px/>
-						  <img id="grass_img4" src='./resources/images/to_grass/4.png' height=100px/>
-						  <img id="grass_img5" src='./resources/images/to_grass/5.png' height=100px/>
+						  <img name="grass" id="grass_img1" src='./resources/images/to_grass/1.png' height=100px/>
+						  <img name="grass" id="grass_img2" src='./resources/images/to_grass/2.png' height=100px />
+						  <img name="grass" id="grass_img3" src='./resources/images/to_grass/3.png' height=100px/>
+						  <img name="grass" id="grass_img4" src='./resources/images/to_grass/4.png' height=100px/>
+						  <!-- <img id="grass_img5" src='./resources/images/to_grass/5.png' height=100px/> -->
 				  </td>
 			  </tr>
-  
-			  <!-- <tr class="spaceUnder">
-				  <td style="font-size:20px">Plants</td>
-				  <td>
-					  <a href="./resources/images/plant_eg.png"><img id="plants" class="rounded" src = "./resources/images/plant_eg.png" height="120px"></img></href></a>
-				  </td>
-				  <td>
-						  <img id="plants_img1" src='./resources/images/to_plants/1.png' height=100px/>
-						  <img id="plants_img2" src='./resources/images/to_plants/2.png' height=100px />
-						  <img id="plants_img3" src='./resources/images/to_plants/3.png' height=100px/>
-						  <img id="plants_img4" src='./resources/images/to_plants/4.png' height=100px/>
-						  <img id="plants_img5" src='./resources/images/to_plants/5.png' height=100px/>
-				  </td>
-			  </tr> -->
-  
-			  <!-- <tr class="spaceUnder">
-				  <td style="font-size:20px">Tree</td>
-				  <td>
-					  <a href="./resources/images/tree_eg.png"><img id="tree" class="rounded" src = "./resources/images/tree_eg.png" height="120px"></img></href></a>
-				  </td>
-				  <td>
-						  <img id="tree_img1" src='./resources/images/to_tree/1.png' height=100px/>
-						  <img id="tree_img2" src='./resources/images/to_tree/2.png' height=100px />
-						  <img id="tree_img3" src='./resources/images/to_tree/3.png' height=100px/>
-						  <img id="tree_img4" src='./resources/images/to_tree/4.png' height=100px/>
-						  <img id="tree_img5" src='./resources/images/to_tree/5.png' height=100px/>
-				  </td>
-			  </tr> -->
   
 			</table>
   
   
 		  <script>
-			  const stone = document.getElementById("stone");
-			  stone.addEventListener("mouseover", stoneOver);
-			  stone.addEventListener("mouseleave", stoneLeave)
+			  let stone = document.getElementsByName("stone");
+			  stone.forEach(function(elem) {
+				elem.addEventListener("mouseover", function() {
+					document.getElementById("stone_img1").src='./resources/images/to_stone/1s.png';
+					document.getElementById("stone_img2").src='./resources/images/to_stone/2s.png';
+					document.getElementById("stone_img3").src='./resources/images/to_stone/3s.png';
+					document.getElementById("stone_img4").src='./resources/images/to_stone/4s.png';
+				});
+			});
 			  
-			  function stoneOver() {
-				document.getElementById("stone_img1").src='./resources/images/to_stone/1s.png';
-				document.getElementById("stone_img2").src='./resources/images/to_stone/2s.png';
-				document.getElementById("stone_img3").src='./resources/images/to_stone/3s.png';
-				document.getElementById("stone_img4").src='./resources/images/to_stone/4s.png';
-				document.getElementById("stone_img5").src='./resources/images/to_stone/5s.png';
-			  }
+			  stone.forEach(item => {
+				item.addEventListener('mouseleave', event => {
+					document.getElementById("stone_img1").src='./resources/images/to_stone/1.png' ;
+					document.getElementById("stone_img2").src='./resources/images/to_stone/2.png' ;
+					document.getElementById("stone_img3").src='./resources/images/to_stone/3.png' ;
+					document.getElementById("stone_img4").src='./resources/images/to_stone/4.png' ;
+				})
+			  })
+
+		  </script>
+
+
   
-			  function stoneLeave() {
-				  document.getElementById("stone_img1").src='./resources/images/to_stone/1.png' ;
-				  document.getElementById("stone_img2").src='./resources/images/to_stone/2.png' ;
-				  document.getElementById("stone_img3").src='./resources/images/to_stone/3.png' ;
-				  document.getElementById("stone_img4").src='./resources/images/to_stone/4.png' ;
-				  document.getElementById("stone_img5").src='./resources/images/to_stone/5.png' ;
-			  }
+		  <script>
+			  const concrete = document.getElementsByName("concrete");
+			  
+			  concrete.forEach(function(elem) {
+				elem.addEventListener("mouseover", function() {
+					document.getElementById("concrete_img1").src='./resources/images/to_concrete/1s.png';
+					document.getElementById("concrete_img3").src='./resources/images/to_concrete/3s.png';
+					document.getElementById("concrete_img4").src='./resources/images/to_concrete/4s.png';
+					document.getElementById("concrete_img5").src='./resources/images/to_concrete/5s.png';
+				});
+			});
+			  
+
+			concrete.forEach(function(elem) {
+				elem.addEventListener("mouseleave", function() {
+					document.getElementById("concrete_img1").src='./resources/images/to_concrete/1.png';
+					document.getElementById("concrete_img3").src='./resources/images/to_concrete/3.png';
+					document.getElementById("concrete_img4").src='./resources/images/to_concrete/4.png';
+					document.getElementById("concrete_img5").src='./resources/images/to_concrete/5.png';
+				});
+			});
 		  </script>
   
 		  <script>
-			  const brick = document.getElementById("brick");
-			  brick.addEventListener("mouseover", brickOver);
-			  brick.addEventListener("mouseleave", brickLeave)
+			const fabric = document.getElementsByName("fabric");
 			  
-			  function brickOver() {
-				document.getElementById("brick_img1").src='./resources/images/to_brick/1s.png';
-				document.getElementById("brick_img2").src='./resources/images/to_brick/2s.png';
-				document.getElementById("brick_img3").src='./resources/images/to_brick/3s.png';
-				document.getElementById("brick_img4").src='./resources/images/to_brick/4s.png';
-				document.getElementById("brick_img5").src='./resources/images/to_brick/5s.png';
-			  }
-  
-			  function brickLeave() {
-				  document.getElementById("brick_img1").src='./resources/images/to_brick/1.png' ;
-				  document.getElementById("brick_img2").src='./resources/images/to_brick/2.png' ;
-				  document.getElementById("brick_img3").src='./resources/images/to_brick/3.png' ;
-				  document.getElementById("brick_img4").src='./resources/images/to_brick/4.png' ;
-				  document.getElementById("brick_img5").src='./resources/images/to_brick/5.png' ;
-			  }
+			fabric.forEach(function(elem) {
+				elem.addEventListener("mouseover", function() {
+					document.getElementById("fabric_img1").src='./resources/images/to_fabric/1s.png';
+					document.getElementById("fabric_img2").src='./resources/images/to_fabric/2s.png';
+					document.getElementById("fabric_img3").src='./resources/images/to_fabric/3s.png';
+					document.getElementById("fabric_img4").src='./resources/images/to_fabric/4s.png';
+				});
+			});
+
+			fabric.forEach(function(elem) {
+				elem.addEventListener("mouseleave", function() {
+					document.getElementById("fabric_img1").src='./resources/images/to_fabric/1.png' ;
+					document.getElementById("fabric_img2").src='./resources/images/to_fabric/2.png' ;
+					document.getElementById("fabric_img3").src='./resources/images/to_fabric/3.png' ;
+					document.getElementById("fabric_img4").src='./resources/images/to_fabric/4.png' ;
+				});
+			});
 		  </script>
   
 		  <script>
-			  const concrete = document.getElementById("concrete");
-			  concrete.addEventListener("mouseover", concreteOver);
-			  concrete.addEventListener("mouseleave", concreteLeave)
-			  
-			  function concreteOver() {
-				document.getElementById("concrete_img1").src='./resources/images/to_concrete/1s.png';
-				document.getElementById("concrete_img2").src='./resources/images/to_concrete/2s.png';
-				document.getElementById("concrete_img3").src='./resources/images/to_concrete/3s.png';
-				document.getElementById("concrete_img4").src='./resources/images/to_concrete/4s.png';
-				document.getElementById("concrete_img5").src='./resources/images/to_concrete/5s.png';
-			  }
+			  const grass = document.getElementsByName("grass");
+			  grass.forEach(function(elem) {
+				elem.addEventListener("mouseover", function() {
+					document.getElementById("grass_img1").src='./resources/images/to_grass/1s.png';
+					document.getElementById("grass_img2").src='./resources/images/to_grass/2s.png';
+					document.getElementById("grass_img3").src='./resources/images/to_grass/3s.png';
+					document.getElementById("grass_img4").src='./resources/images/to_grass/4s.png';
+				});
+			});
+
   
-			  function concreteLeave() {
-				  document.getElementById("concrete_img1").src='./resources/images/to_concrete/1.png' ;
-				  document.getElementById("concrete_img2").src='./resources/images/to_concrete/2.png' ;
-				  document.getElementById("concrete_img3").src='./resources/images/to_concrete/3.png' ;
-				  document.getElementById("concrete_img4").src='./resources/images/to_concrete/4.png' ;
-				  document.getElementById("concrete_img5").src='./resources/images/to_concrete/5.png' ;
-			  }
+			  grass.forEach(function(elem) {
+				elem.addEventListener("mouseleave", function() {
+					document.getElementById("grass_img1").src='./resources/images/to_grass/1.png';
+					document.getElementById("grass_img2").src='./resources/images/to_grass/2.png';
+					document.getElementById("grass_img3").src='./resources/images/to_grass/3.png';
+					document.getElementById("grass_img4").src='./resources/images/to_grass/4.png';
+				});
+			});
 		  </script>
   
-		  <script>
-			  const fabric = document.getElementById("fabric");
-			  fabric.addEventListener("mouseover", fabricOver);
-			  fabric.addEventListener("mouseleave", fabricLeave)
-			  
-			  function fabricOver() {
-				document.getElementById("fabric_img1").src='./resources/images/to_fabric/1s.png';
-				document.getElementById("fabric_img2").src='./resources/images/to_fabric/2s.png';
-				document.getElementById("fabric_img3").src='./resources/images/to_fabric/3s.png';
-				document.getElementById("fabric_img4").src='./resources/images/to_fabric/4s.png';
-				document.getElementById("fabric_img5").src='./resources/images/to_fabric/5s.png';
-			  }
-  
-			  function fabricLeave() {
-				  document.getElementById("fabric_img1").src='./resources/images/to_fabric/1.png' ;
-				  document.getElementById("fabric_img2").src='./resources/images/to_fabric/2.png' ;
-				  document.getElementById("fabric_img3").src='./resources/images/to_fabric/3.png' ;
-				  document.getElementById("fabric_img4").src='./resources/images/to_fabric/4.png' ;
-				  document.getElementById("fabric_img5").src='./resources/images/to_fabric/5.png' ;
-			  }
-		  </script>
-  
-		  <script>
-			  const grass = document.getElementById("grass");
-			  grass.addEventListener("mouseover", grassOver);
-			  grass.addEventListener("mouseleave", grassLeave)
-			  
-			  function grassOver() {
-				document.getElementById("grass_img1").src='./resources/images/to_grass/1s.png';
-				document.getElementById("grass_img2").src='./resources/images/to_grass/2s.png';
-				document.getElementById("grass_img3").src='./resources/images/to_grass/3s.png';
-				document.getElementById("grass_img4").src='./resources/images/to_grass/4s.png';
-				document.getElementById("grass_img5").src='./resources/images/to_grass/5s.png';
-			  }
-  
-			  function grassLeave() {
-				  document.getElementById("grass_img1").src='./resources/images/to_grass/1.png' ;
-				  document.getElementById("grass_img2").src='./resources/images/to_grass/2.png' ;
-				  document.getElementById("grass_img3").src='./resources/images/to_grass/3.png' ;
-				  document.getElementById("grass_img4").src='./resources/images/to_grass/4.png' ;
-				  document.getElementById("grass_img5").src='./resources/images/to_grass/5.png' ;
-			  }
-		  </script>
-  
-		  <script>
-			  const plants = document.getElementById("plants");
-			  plants.addEventListener("mouseover", plantsOver);
-			  plants.addEventListener("mouseleave", plantsLeave)
-			  
-			  function plantsOver() {
-				document.getElementById("plants_img1").src='./resources/images/to_plants/1s.png';
-				document.getElementById("plants_img2").src='./resources/images/to_plants/2s.png';
-				document.getElementById("plants_img3").src='./resources/images/to_plants/3s.png';
-				document.getElementById("plants_img4").src='./resources/images/to_plants/4s.png';
-				document.getElementById("plants_img5").src='./resources/images/to_plants/5s.png';
-			  }
-  
-			  function plantsLeave() {
-				  document.getElementById("plants_img1").src='./resources/images/to_plants/1.png' ;
-				  document.getElementById("plants_img2").src='./resources/images/to_plants/2.png' ;
-				  document.getElementById("plants_img3").src='./resources/images/to_plants/3.png' ;
-				  document.getElementById("plants_img4").src='./resources/images/to_plants/4.png' ;
-				  document.getElementById("plants_img5").src='./resources/images/to_plants/5.png' ;
-			  }
-		  </script>
-  
-		  <script>
-			  const tree = document.getElementById("tree");
-			  tree.addEventListener("mouseover", treeOver);
-			  tree.addEventListener("mouseleave", treeLeave)
-			  
-			  function treeOver() {
-				document.getElementById("tree_img1").src='./resources/images/to_tree/1s.png';
-				document.getElementById("tree_img2").src='./resources/images/to_tree/2s.png';
-				document.getElementById("tree_img3").src='./resources/images/to_tree/3s.png';
-				document.getElementById("tree_img4").src='./resources/images/to_tree/4s.png';
-				document.getElementById("tree_img5").src='./resources/images/to_tree/5s.png';
-			  }
-  
-			  function treeLeave() {
-				  document.getElementById("tree_img1").src='./resources/images/to_tree/1.png' ;
-				  document.getElementById("tree_img2").src='./resources/images/to_tree/2.png' ;
-				  document.getElementById("tree_img3").src='./resources/images/to_tree/3.png' ;
-				  document.getElementById("tree_img4").src='./resources/images/to_tree/4.png' ;
-				  document.getElementById("tree_img5").src='./resources/images/to_tree/5.png' ;
-			  }
-		  </script>
 
 			<center><h3>Multimodal video prediction</h3></center>
 			We use our dataset to ask whether visual data can improve our estimates of future tactile signals: i.e., what will this object
@@ -756,7 +664,7 @@
 	<div class="content" id="acknowledgements">
 		<center><h1>Acknowledgements</h1></center>
 		We thank Xiaofeng Guo and Yufan Zhang for the extensive help with the GelSight sensor, and thank Daniel Geng, Yuexi Du and Zhaoying Pan for the helpful discussions. This work was supported in part by Cisco Systems.
-		The webpage template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for <a href="http://richzhang.github.io/colorization/">Colorization</a> project.
+		The webpage template was adopted from <a href="http://richzhang.github.io/colorization/">Colorization</a> project and <a href="http://www.cs.columbia.edu/~vondrick/ihog/">HOGgles</a> project.
 	</div>
 		<hr>
 		<br><br><br>
