@@ -12,7 +12,7 @@
 		background-color : #EFEFEF;
 	}
 	.content{
-    width : 1000px;
+    width : 1110px;
     padding : 25px 50px;
     margin : 25px auto;
     background-color : #fff;
@@ -52,6 +52,7 @@
 	.paddingBetweenRows td
 	{
 		padding:0 15px;
+		border-spacing: 100px;
 	}
 
 
@@ -272,7 +273,12 @@
 	}
 	.vtable {
 		border-collapse:separate;
-		border-spacing:20px 15px;
+		border-spacing:10px 15px;
+	}
+	.rtable {
+		margin-left: 2em;
+		border-collapse:separate;
+		border-spacing:10px 15px;
 	}
 </style>
 
@@ -326,6 +332,7 @@
 							&nbsp&nbsp&nbsp&nbsp&nbsp
 	  						<span style="font-size:20px"><a href='https://drive.google.com/drive/folders/1NDasyshDCL9aaQzxjn_-Q5MBURRT360B'> [Dataset]</a></span>
 							  &nbsp&nbsp&nbsp&nbsp&nbsp
+	  						<span style="font-size:20px"><a href='https://github.com/fredfyyang/Tactile-Driven-Image-Stylization/'> [Github]</a></span>
 		  		  		</center>
 		  		  	  </td>
 	  			  <tr>
@@ -357,14 +364,14 @@
 				<video controls class="html-video" width="512" height="201.6"><source src="./resources/video/comb_long1.mp4" type="video/mp4"></video>
 				<br><br>
 				<video controls class="html-video" width="512" height="201.6"><source src="./resources/video/comb_long2.mp4" type="video/mp4"></video>
-				<br><br>
-				<span style="font-size:16px"><i>Untrimmed video examples from our dataset.</i>	
+				<br>
+				<span style="font-size:16px"><i>Untrimmed video examples from our dataset</i>	
 			</div>
 			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 			<div class="column">	
 				<img id="human_collect" src='./resources/images/human_collect2.jpg' width="300" height="400"/>
-				<br><br>
-				<span style="font-size:16px"><i>A photo of two data collectors collecting data in the wild while fully equipped.</i>
+				<br>
+				<span style="font-size:16px"><i>Two people collecting data</i>
 			</div>
 		</div>
 
@@ -375,7 +382,7 @@
 
 	<div class="content" id="demonstration video">
 		<center><h1>Examples from our Dataset</h3></center>
-		<iframe width="920" height="483" src="https://www.youtube.com/embed/6kdPmmWrGz4"> </iframe>
+		<center><iframe width="920" height="483" src="https://www.youtube.com/embed/6kdPmmWrGz4"> </iframe><center>
 	</div>
 
 	<div class="content" id="dataset">
@@ -383,53 +390,54 @@
 		<center><h1>Dataset</h1></center>
 	</table>
 	<center style="font-size:20px"><a href='https://drive.google.com/drive/folders/1NDasyshDCL9aaQzxjn_-Q5MBURRT360B'> [Download Link]</a></center><br>
-	<center><h3>Videos Classified by Labels</h3></center>
-	<table align=center width=95% class="vtable">
+	<center><h3>Labeled Video Data</h3></center>
+	<table width=45% class="vtable" style="float: left">
 		<tr>
 			<th style="font-size:16px"> <p>Label</p></th>
-			<th style="font-size:16px">Visual Video &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GelSight Video</th>
-			<th style="font-size:16px"> <p>Label</p></th>
-			<th style="font-size:16px">Visual Video &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GelSight Video</th>
+			<th style="font-size:16px" >RGB Video &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gelsight Video</th>
 		</tr>
 
 		<tr>
 			<th style="font-size:16px">Synthetic Fabric</th>
-			<th>
-				<video controls class="html-video" width="320" height="126"><source src="./resources/video/fabric.mp4" type="video/mp4"></video>
-			</th>
-			
-			<th style="font-size:16px">Wood</th>
-			<th>
-				<video controls class="html-video" width="320" height="126"><source src="./resources/video/wood.mp4" type="video/mp4"></video>
-			</th>
+			<th><video controls class="html-video" width="384" height="151.2"><source src="./resources/video/fabric.mp4" type="video/mp4"></video></th>
 		</tr>
 		
 		<tr>
 			<th style="font-size:16px">Stone</th>
-
-			<th>
-				<video controls class="html-video" width="320" height="126"><source src="./resources/video/stone_1.mp4" type="video/mp4"></video>
-			</th>
-			<th style="font-size:16px">Grass</th>
-			<th>
-				<video controls class="html-video" width="320" height="126"><source src="./resources/video/grass.mp4" type="video/mp4"></video>
-			</th>
+			<th><video controls class="html-video" width="384" height="151.2"><source src="./resources/video/stone_1.mp4" type="video/mp4"></video></th>
 		</tr>
 
 		<tr>
 			<th style="font-size:16px">Brick</th>
-			<th>
-				<video controls class="html-video" width="320" height="126"><source src="./resources/video/brick.mp4" type="video/mp4"></video>
-
-			</th>
-			<th style="font-size:16px">Concrete</th>
-			<th>
-				<video controls class="html-video" width="320" height="126"><source src="./resources/video/concrete_1.mp4" type="video/mp4"></video>
-			</th>
+			<th><video controls class="html-video" width="384" height="151.2"><source src="./resources/video/brick.mp4" type="video/mp4"></video></th>
 		</tr>
-
 		</table>
-		<br><br><br>
+
+
+		<table width=45% class="rtable" style="float: right">
+			<tr>
+				<th style="font-size:16px"> <p>Label</p></th>
+				<th style="font-size:16px" >RGB Video &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gelsight Video</th>
+			</tr>
+	
+			<tr>
+				<th style="font-size:16px">Wood</th>
+				<th><video controls class="html-video" width="384" height="151.2"><source src="./resources/video/wood.mp4" type="video/mp4"></video></th>
+			</tr>
+			
+			<tr>
+				<th style="font-size:16px">Grass</th>
+				<th><video controls class="html-video" width="384" height="151.2"><source src="./resources/video/grass.mp4" type="video/mp4"></video></th>
+			</tr>
+	
+			<tr>
+				<th style="font-size:16px">Concrete</th>
+				<th>
+					<video controls class="html-video" width="384" height="151.2"><source src="./resources/video/concrete_1.mp4" type="video/mp4"></video>
+				</th>
+			</tr>
+	
+			</table>
 		
 
         <div align=center width=100%>
@@ -450,13 +458,6 @@
         </div>
 	</div>
 
-		  
-
-
-
-
-		  
-
 
 
 
@@ -467,24 +468,22 @@
 
 			<center><h3>Tactile-driven image stylization</h3></center> 
 			Both touch and sight convey material properties and geometry. A model that can successfully predict these properties from visuo-tactile data therefore ought to be able to translate between modalities.
-			We propose the task of tactile-driven image stylization: making an image look as though it “feels like” a given touch signal.<br>
-			In the figure below we show results from our model. Our model successfully manipulates
+			We propose the task of tactile-driven image stylization: making an image look as though it “feels like” a given touch signal. In the figure below we show results from our model. Our model successfully manipulates
 			images to match tactile inputs, such as by making surfaces rougher or smoother, or by creating
 			“hybrid” materials (e.g., adding grass to a surface).
 			<br><br>
-			Hover over each row to see how the pictures change according to the first column!
+			Hover over each row to make the right pictures look like the left tactile input.
 			<br><br>
 
 			<table align=center style="width:100%" class='paddingBetweenRows'>
 			  <tr class="spaceUnder">
 				  <td style="font-size:20px">Stone</td>
-				  <td><a href="./resources/images/stone_eg.png"><img name="stone" class="rounded" src = "./resources/images/stone_eg.png" height="120px"></img></href></a></td>
+				  <td><a href="./resources/images/stone_eg.png"><img name="stone" class="rounded" src = "./resources/images/stone_eg.png" height="150px"></img></href></a></td>
 				  
-				  <td>
-						  <img name="stone" id="stone_img1" src='./resources/images/to_stone/1.png'  height="100px"/>
-						  <img name="stone" id="stone_img2" src='./resources/images/to_stone/2.png'  height="100px"/>
-						  <img name="stone" id="stone_img3" src='./resources/images/to_stone/3.png'  height="100px"/>
-						  <img name="stone" id="stone_img4" src='./resources/images/to_stone/4.png'  height="100px"/>
+				  <td style="padding-left: 80px;">
+						  <img name="stone" id="stone_img2" src='./resources/images/to_stone/2.png'  height="150px"/>
+						  &nbsp;&nbsp;&nbsp;&nbsp;
+						  <img name="stone" id="stone_img3" src='./resources/images/to_stone/3.png'  height="150px"/>
 						  <!-- <img id="stone_img5" src='./resources/images/to_stone/5.png'  height="100px"/> -->
 				  </td>
 			  </tr>
@@ -492,13 +491,12 @@
 			  <tr class="spaceUnder">
 				  <td style="font-size:20px">Concrete</td>
 				  <td>
-					  <a href="./resources/images/concrete_eg.png"><img name="concrete" id="concrete" class="rounded" src = "./resources/images/concrete_eg.png" height="120px"></img></href></a>
+					  <a href="./resources/images/concrete_eg.png"><img name="concrete" id="concrete" class="rounded" src = "./resources/images/concrete_eg.png" height="150px"></img></href></a>
 				  </td>
-				  <td>
-						  <img name="concrete" id="concrete_img3" src='./resources/images/to_concrete/3.png' height=100px/>
-						  <img name="concrete" id="concrete_img4" src='./resources/images/to_concrete/4.png' height=100px/>
-						  <img name="concrete" id="concrete_img5" src='./resources/images/to_concrete/5.png' height=100px/>
-						  <img name="concrete" id="concrete_img1" src='./resources/images/to_concrete/1.png' height=100px/>
+				  <td style="padding-left: 80px;">
+						  <img name="concrete" id="concrete_img3" src='./resources/images/to_concrete/3.png' height=150px/>
+						  &nbsp;&nbsp;&nbsp;&nbsp;
+						  <img name="concrete" id="concrete_img4" src='./resources/images/to_concrete/4.png' height=150px/>
 						  <!-- <img id="concrete_img2" src='./resources/images/to_concrete/2.png' height=100px /> -->
 				  </td>
 			  </tr>
@@ -506,13 +504,12 @@
 			  <tr class="spaceUnder">
 				  <td style="font-size:20px">Fabric</td>
 				  <td>
-					  <a href="./resources/images/fabric_eg.png"><img name="fabric" id="fabric" class="rounded" src = "./resources/images/fabric_eg.png" height="120px"></img></href></a>
+					  <a href="./resources/images/fabric_eg.png"><img name="fabric" id="fabric" class="rounded" src = "./resources/images/fabric_eg.png" height="150px"></img></href></a>
 				  </td>
-				  <td>
-						  <img name="fabric" id="fabric_img1" src='./resources/images/to_fabric/1.png' height=100px/>
-						  <img name="fabric" id="fabric_img2" src='./resources/images/to_fabric/2.png' height=100px />
-						  <img name="fabric" id="fabric_img3" src='./resources/images/to_fabric/3.png' height=100px/>
-						  <img name="fabric" id="fabric_img4" src='./resources/images/to_fabric/4.png' height=100px/>
+				  <td style="padding-left: 80px">
+						  <img name="fabric" id="fabric_img2" src='./resources/images/to_fabric/2.png' height=150px />
+						  &nbsp;&nbsp;&nbsp;&nbsp;
+						  <img name="fabric" id="fabric_img4" src='./resources/images/to_fabric/4.png' height=150px/>
 						  <!-- <img id="fabric_img5" src='./resources/images/to_fabric/5.png' height=100px/> -->
 				  </td>
 			  </tr>
@@ -520,13 +517,12 @@
 			  <tr class="spaceUnder">
 				  <td style="font-size:20px">Grass</td>
 				  <td>
-					  <a href="./resources/images/grass_eg.png"><img name="grass" id="grass" class="rounded" src = "./resources/images/grass_eg.png" height="120px"></img></href></a>
+					  <a href="./resources/images/grass_eg.png"><img name="grass" id="grass" class="rounded" src = "./resources/images/grass_eg.png" height="150px"></img></href></a>
 				  </td>
-				  <td>
-						  <img name="grass" id="grass_img1" src='./resources/images/to_grass/1.png' height=100px/>
-						  <img name="grass" id="grass_img2" src='./resources/images/to_grass/2.png' height=100px />
-						  <img name="grass" id="grass_img3" src='./resources/images/to_grass/3.png' height=100px/>
-						  <img name="grass" id="grass_img4" src='./resources/images/to_grass/4.png' height=100px/>
+				  <td style="padding-left: 80px">
+						  <img name="grass" id="grass_img3" src='./resources/images/to_grass/3.png' height=150px/>
+						  &nbsp;&nbsp;&nbsp;&nbsp;
+						  <img name="grass" id="grass_img4" src='./resources/images/to_grass/4.png' height=150px/>
 						  <!-- <img id="grass_img5" src='./resources/images/to_grass/5.png' height=100px/> -->
 				  </td>
 			  </tr>
@@ -538,19 +534,15 @@
 			  let stone = document.getElementsByName("stone");
 			  stone.forEach(function(elem) {
 				elem.addEventListener("mouseover", function() {
-					document.getElementById("stone_img1").src='./resources/images/to_stone/1s.png';
 					document.getElementById("stone_img2").src='./resources/images/to_stone/2s.png';
 					document.getElementById("stone_img3").src='./resources/images/to_stone/3s.png';
-					document.getElementById("stone_img4").src='./resources/images/to_stone/4s.png';
 				});
 			});
 			  
 			  stone.forEach(item => {
 				item.addEventListener('mouseleave', event => {
-					document.getElementById("stone_img1").src='./resources/images/to_stone/1.png' ;
 					document.getElementById("stone_img2").src='./resources/images/to_stone/2.png' ;
 					document.getElementById("stone_img3").src='./resources/images/to_stone/3.png' ;
-					document.getElementById("stone_img4").src='./resources/images/to_stone/4.png' ;
 				})
 			  })
 
@@ -563,20 +555,16 @@
 			  
 			  concrete.forEach(function(elem) {
 				elem.addEventListener("mouseover", function() {
-					document.getElementById("concrete_img1").src='./resources/images/to_concrete/1s.png';
 					document.getElementById("concrete_img3").src='./resources/images/to_concrete/3s.png';
 					document.getElementById("concrete_img4").src='./resources/images/to_concrete/4s.png';
-					document.getElementById("concrete_img5").src='./resources/images/to_concrete/5s.png';
 				});
 			});
 			  
 
 			concrete.forEach(function(elem) {
 				elem.addEventListener("mouseleave", function() {
-					document.getElementById("concrete_img1").src='./resources/images/to_concrete/1.png';
 					document.getElementById("concrete_img3").src='./resources/images/to_concrete/3.png';
 					document.getElementById("concrete_img4").src='./resources/images/to_concrete/4.png';
-					document.getElementById("concrete_img5").src='./resources/images/to_concrete/5.png';
 				});
 			});
 		  </script>
@@ -586,18 +574,14 @@
 			  
 			fabric.forEach(function(elem) {
 				elem.addEventListener("mouseover", function() {
-					document.getElementById("fabric_img1").src='./resources/images/to_fabric/1s.png';
 					document.getElementById("fabric_img2").src='./resources/images/to_fabric/2s.png';
-					document.getElementById("fabric_img3").src='./resources/images/to_fabric/3s.png';
 					document.getElementById("fabric_img4").src='./resources/images/to_fabric/4s.png';
 				});
 			});
 
 			fabric.forEach(function(elem) {
 				elem.addEventListener("mouseleave", function() {
-					document.getElementById("fabric_img1").src='./resources/images/to_fabric/1.png' ;
 					document.getElementById("fabric_img2").src='./resources/images/to_fabric/2.png' ;
-					document.getElementById("fabric_img3").src='./resources/images/to_fabric/3.png' ;
 					document.getElementById("fabric_img4").src='./resources/images/to_fabric/4.png' ;
 				});
 			});
@@ -607,8 +591,6 @@
 			  const grass = document.getElementsByName("grass");
 			  grass.forEach(function(elem) {
 				elem.addEventListener("mouseover", function() {
-					document.getElementById("grass_img1").src='./resources/images/to_grass/1s.png';
-					document.getElementById("grass_img2").src='./resources/images/to_grass/2s.png';
 					document.getElementById("grass_img3").src='./resources/images/to_grass/3s.png';
 					document.getElementById("grass_img4").src='./resources/images/to_grass/4s.png';
 				});
@@ -617,8 +599,6 @@
   
 			  grass.forEach(function(elem) {
 				elem.addEventListener("mouseleave", function() {
-					document.getElementById("grass_img1").src='./resources/images/to_grass/1.png';
-					document.getElementById("grass_img2").src='./resources/images/to_grass/2.png';
 					document.getElementById("grass_img3").src='./resources/images/to_grass/3.png';
 					document.getElementById("grass_img4").src='./resources/images/to_grass/4.png';
 				});
