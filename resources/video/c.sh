@@ -1,0 +1,2 @@
+#!/bin/bash
+ffmpeg -i ./comb_long1.mp4 -i ./comb_long2.mp4 -filter_complex "[0:v]crop=1280:495, pad=1280:504:0:0:black[tmp0]; [1:v]crop=1280:504, pad=1280:504:1:0:black[tmp1]; [tmp0][tmp1]vstack[v] " -map [v] -y o.mp4
